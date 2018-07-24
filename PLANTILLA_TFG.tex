@@ -1,0 +1,143 @@
+%% Los margenes, tipo de hoja y estilo BOOK
+\documentclass[a4paper,11pt,twoside,openright,titlepage]{book}
+\usepackage[a4paper,left=1in,right=1in,top=0.6in]{geometry}
+
+\usepackage[T1]{fontenc}    %Ineterprete de tíldes
+%\usepackage[Latin1]{inputenc}
+\usepackage{amsmath,amssymb}    %Paquete de entornos matematicos
+
+\usepackage{natbib}
+\usepackage[english,spanish]{babel}
+\selectlanguage{spanish} 
+\usepackage{graphicx}
+\usepackage{psfrag}
+\usepackage{quotchap}
+\usepackage{epsfig}
+\usepackage[all]{xy}
+
+\usepackage{epsfig}
+\usepackage{makeidx}
+\usepackage{ifthen}
+\usepackage{multicolpar}    %Para poner texto en columnas en plan articulo intercalado con texto normal
+\usepackage{multicol,multirow}
+
+\usepackage{url}        %Para direcciones web
+\usepackage{marvosym}   %Para imprimir el simbolo de \EUR euro
+%\usepackage{eurosym}   %Para imprimir el simbolo de \euro euro
+\usepackage{fancybox}   %Para tablas con bordes redondeados
+
+
+%% Modificación de la plantilla para adaptarla a los requisitos de PFC
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%%% Cabeceras y pies de página
+\fancyhead[CE,CO]{\emph{\titulo}}
+\fancyhead[LE,LO,RE,RO]{}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[CE,CO]{\leftmark}
+
+\renewcommand{\footrulewidth}{.6pt}
+
+
+%Definiciones de funciones para los titulos
+\newlength\salto
+\setlength{\salto}{3.5ex plus 1ex minus .2ex}
+
+\newlength\resalto
+\setlength{\resalto}{2.3ex plus.2ex}
+
+\newcommand{\lsection}[1]
+                {\section{#1}
+                \vskip-.9\resalto   %%%% Aquí reculo el posible salto por defecto de \section
+                \hrule
+                \vskip+.9\salto}  %%%% vuelvo ha realizar el salto (puedes poner otra vez el 90%)
+
+
+%Para imágenes de entornos estáticos \captionFigure{Texto Caption}{Texto Label}
+\newcommand{\captionFigure}[2]{
+    \refstepcounter{figure}
+    \centerline{Figura \thefigure: #1 \label{#2}}
+    \addcontentsline{lof}{section}{\thefigure.\ #1\label{#2}}
+}
+
+%Para imágenes de entornos estáticos \NOcaptionFigure{Texto Caption}{Texto Label} "No escribe el caption"
+\newcommand{\NOcaptionFigure}[2]{
+    \refstepcounter{figure}
+    \addcontentsline{lof}{figure}{\thefigure.\ #1\label{#2}}
+}
+
+
+%% Datos del PFC
+\newcommand{\titulo}{Título del TFG}
+\newcommand{\autor}{Autor: Nombre Apellido1 Apellido2}
+\newcommand{\director}{Nombre Apellido1 Apellido2}
+\newcommand{\tutor}{Tutor: Nombre Apellido1 Apellido2}
+\newcommand{\ponente}{Ponente: Nombre Apellido1 Apellido2}
+\newcommand{\vocal}{Nombre Apellido1 Apellido2}
+\newcommand{\vocalsup}{Nombre Apellido1 Apellido2}
+\newcommand{\presidente}{Nombre Apellido1 Apellido2}
+\newcommand{\presidentesup}{Nombre Apellido1 Apellido2}
+\newcommand{\fecha}{MES 20xx}
+\newcommand{\carrera}{Grado en ...}
+
+\begin{document}
+\setlength{\baselineskip}{18pt}  %% Espacio interlinea
+\setlength{\parskip}{6pt plus 1pt minus 1pt} %% Espacio interpárrafo
+
+\input{portada}
+
+\frontmatter %Define el cuerpo inicial del libro en numeración con letras romanas
+
+\input{primera_pag}
+
+\input{resumen}
+
+\input{agradecimientos}
+
+\tableofcontents
+
+\newpage \thispagestyle{empty} % Página vacía
+
+\addcontentsline{toc}{chapter}{Índice de Figuras}    %Para que aparezca en el índice
+\renewcommand{\listfigurename}{Índice de Figuras} 
+\listoffigures
+
+\newpage \thispagestyle{empty} % Página vacía
+
+\addcontentsline{toc}{chapter}{Índice de Tablas}    %Para que aparezca en el índice
+\renewcommand{\listtablename}{Índice de Tablas} 
+\listoftables
+
+\newpage \thispagestyle{empty} % Página vacía
+
+\mainmatter %Define el cuerpo principal del libro numeración normal.
+
+% \input{preambulo}
+
+\input{cap_intro}
+
+\input{cap_estadodelarte}
+
+\input{cap_sistemadesarrollado}
+
+\input{cap_experimentos}
+
+\input{cap_conclusiones}
+
+\input{glosario}
+
+\bibliographystyle{unsrt}   %plain pero ordenado en orden de aparacicion en documento principal
+\bibliography{bibliografia}
+
+\appendix   %Indicamos que lo que viene a continuación son apéndices
+
+%\frontmatter %Para poner los anexos en numeros romanos
+
+\input{anexo_manualuso}
+
+\input{anexo_manualprogramador}
+
+%Hoja final en blanco
+\newpage \thispagestyle{empty} % Página vacía
+
+\end{document}
