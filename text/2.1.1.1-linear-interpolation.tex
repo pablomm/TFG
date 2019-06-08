@@ -1,0 +1,21 @@
+
+Given two points $t_k$ and $t_{k+1}$ for which the values of our function are
+known, denoted by $y_k$ and $y_{k+1}$, we can use a line segment to join these
+values as a first approach. Using this type interpolation, we will obtain a
+piecewise linear function, whose value in the interval $[t_k, t_{k+1}]$ will
+be given by
+$$
+x(t)= y_{k}+\frac{y_{k+1}-y_{k}}{t_{k+1}-t_{k}}\left(t-t_{k}\right).
+$$
+In the case of multivariate functions, multilinear interpolation
+[ref to multilinear interpolation] generalizes this method to higher dimensions.
+The same principles will be applied, but the piecewise domain will be composed
+by regions calculated using triangulation, and the evaluation will be performed
+using a multilinear form, obtaining in the case of surfaces piecewise
+functions formed by plane sections. In the figure \ref{FIG:Linear} it is plotted
+the result of interpolating a temporal series and a surface.
+
+\begin{figure}{FIG:LINEAR}{Example of linear interpolation}
+  \subfigure[SBFIG:LINEAR1]{Linear interpolation}{\image{3cm}{}{0-empty}} \quad
+  \subfigure[SBFIG:LINEAR2]{Bilinear interpolation}{\image{3cm}{}{0-empty}}
+\end

@@ -1,0 +1,37 @@
+
+In spline interpolation, as in the linear case, we will define a piecewise
+function, but employing polynomials to join the different points known.
+The main advantage of using splines of order $n$, i.e., using polynomial of
+order $n$, is that we will not only obtain continuous functions, as in the
+linear case, but we will also obtain functions $\mathcal{C}^{n-1}[a,b]$.
+This fact will be crucial in FDA, because we will need to use derivatives in
+many phases of the analysis.
+
+To achieve this, we will have to match the values of the derivatives of the
+adjacent splines in the interpolation knots. If we denote by
+$p_k(t)=\sum_{j=0}^n c_{jk} t^k$ to the spline defined in the region
+$[t_{k-1}, t_{k}]$, during the calculation of the coefficients $c_{jk}$, we must
+impose the restriction $p_{k}^(d)(t_k) = p_{k+1}^(d)$ for $d=1, \dots, n-1$.
+For this purpose, we will define a linear system of equations which will be
+solved iteratively. Figure \ref{FIG:SPLINE} shows the result of interpolate a
+temporal series using splines of different orders (\ref{SBFIG:SPLINE1}), and the
+derivation with these interpolators (\ref{SBFIG:SPLINE2}).
+
+\begin{figure}{FIG:SPLINE}{Example of spline interpolation}
+  \subfigure[SBFIG:SPLINE1]{Function interpolated}{\image{3cm}{}{0-empty}} \quad
+  \subfigure[SBFIG:SPLINE2]{Splines derivatives $\partial_t$}{\image{3cm}{}{0-empty}}
+\end
+
+We can extend spline interpolation for multivariate functions, such as surfaces,
+where bivariate splines will be used. In this case, we will use triangulation
+to calculate the regions in which the polynomials will be defined, which will
+be of the form $p(x, y) = \sum_{0 \le i + j \le n} \c_{i,j}x^i y^j$.
+In the figure \ref{SBFIG:CUBICSPLINE1} it is shown the result of the
+interpolation of a surface
+using bicubic splines, and a partial derivative of the surface
+\ref{SBFIG:CUBICSPLINE2}.
+
+\begin{figure}{FIG:CUBICSPLINE}{Surface interpolated using bicubic splines}
+  \subfigure[SBFIG:CUBICSPLINE1]{Surface interpolated}{\image{3cm}{}{0-empty}} \quad
+  \subfigure[SBFIG:CUBICSPLINE2]{Partial derivative $\partial_x$}{\image{3cm}{}{0-empty}}
+\end
