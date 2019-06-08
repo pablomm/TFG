@@ -1,0 +1,52 @@
+It will be useful to quantify the amount of variability due to the phase and the
+amplitude, in order to understand the data and validate the registration
+procedure. For this purpose, in Kneip and Ramsay (2008)
+[Ref to Kneip and Ramsay] it is developed an effective method for quantifying
+this variation once the data have been aligned.
+
+Let $\{x_i\}_{i=1}^N$ be a set of functional observations, and
+$\{y_i\}_{i=1}^N = \{x_i \circ \gamma_i\}_{i=1}^N$ the corresponding registered
+observations. Also, we will denote as $\bar x$ and $\bar y$ the
+cross-sectional means. The Total Mean Square Error is defined as
+
+$$
+\text{MSE}_{total}=  \frac{1}{N}\sum_{i=1}^{N} \|x_i(t)-\overline x(t)\|^2 =
+\frac{1}{N}\sum_{i=1}^{N}\int[x_i(t)-\overline x(t)]^2dt .
+$$
+
+We can decompose the error in the part to each of the two sources of variability.
+
+$$
+\text{MSE}_{amp} =  C_R \frac{1}{N}
+        \sum_{i=1}^{N} \int \left [ y_i(t) - \overline{y}(t) \right ]^2 dt
+
+\text{MSE}_{phase}=
+        \int \left [C_R \overline{y}^2(t) - \overline{x}^2(t) \right]dt
+$$
+
+The constant $C_R$, it is related with the covariance between $\dot \gamma_i$
+and $y_i^2$, and it is defined as
+
+$$
+C_R = 1 + \frac{\frac{1}{N}\sum_{i}^{N}\int [\dot \gamma(t)-\overline{\dot \gamma}(t)]
+        [ y_i^2(t)- \overline{y^2}(t) ]dt}
+        {\frac{1}{N} \sum_{i}^{N} \int y_i^2(t)dt}
+$$
+
+Can be proved[*] that
+
+$$
+\text{MSE}_{total} = \text{MSE}_{amp} + \text{MSE}_{phase}
+$$
+
+From this separation we will construct a square multiple correlation index
+$R^2$, which will indicate the proportion of the variation due to the phase
+explained by our registration process. This index will be defined as
+
+$$
+R^2 = \frac{\text{MSE}_{phase}}{\text{MSE}_{total}}.
+$$
+
+For instance, by quantifying the alignment of the dataset of the figure
+\ref{FIG:SHIFT}, we get a value of $R^2=0.99$, which indicates that the $99%$ of
+the variability it is produced by the phase .

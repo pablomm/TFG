@@ -1,0 +1,25 @@
+Let  $f_1, f_2 \in \mathcal{F}$ be two functions aligned. Generally, if we apply
+a reparameterization $\gamma\in\Gamma$ to both functions, their distance will
+change, thus
+
+$$
+\| f_1 \circ \gamma – f_2 \circ \gamma \|^2 = \int_T (f_1(\gamma(t)) –
+f_2(\gamma(t)|^2dt =
+\int_T |f_1(s) – f_2(s)|^2 \frac{1}{\dot \gamma ( \gamma^{-1}(s))} ds
+(s=\gamma(t))) \, ,
+$$
+
+in other words, the action of \Gamma over \mathcal{F} under de \mathbb{L}^2
+metric is not by isometries.
+
+Therefore $E[f_1, f_2] \neq E[f_1 \circ \gamma, f_2 \circ \gamma]$ and
+consequently $f_1 \circ \gamma y f_2 \circ \gamma$ may not be aligned.
+
+A direct consequence of this issue will be the inverse inconsistency of the
+problem, because of $E[f_1 \circ \gamma, f_2] \neq
+E[f_1, f_2 \circ \gamma^{-1}]$. It would be desirable that the transformation
+necessary to align $f_1$ to $f_2$ be the inverse transformation to align $f_2$
+to $f_1$.
+
+The search of a more adequate energy for this problem will motivate the section
+\ref{SEC:ELASTIC} of this work.
