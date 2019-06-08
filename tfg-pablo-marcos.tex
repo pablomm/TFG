@@ -1,0 +1,54 @@
+% arara: clean: {files: [tfgtfmthesisuam.aux, tfgtfmthesisuam.idx, tfgtfmthesisuam.ilg, tfgtfmthesisuam.ind, tfgtfmthesisuam.bbl, tfgtfmthesisuam.bcf, tfgtfmthesisuam.blg, tfgtfmthesisuam.run.xml, tfgtfmthesisuam.fdb_latexmk, tfgtfmthesisuam.fls, tfgtfmthesisuam.loe, tfgtfmthesisuam.lof, tfgtfmthesisuam.lol, tfgtfmthesisuam.lot, tfgtfmthesisuam.ltb, tfgtfmthesisuam.out, tfgtfmthesisuam.toc, tfgtfmthesisuam.upa, tfgtfmthesisuam.upb, tfgtfmthesisuam.acn, tfgtfmthesisuam.acr, tfgtfmthesisuam.alg, tfgtfmthesisuam.glg, tfgtfmthesisuam.glo, tfgtfmthesisuam.gls, tfgtfmthesisuam.glsdefs, tfgtfmthesisuam.idx,  tfgtfmthesisuam.ilg, tfgtfmthesisuam.xdy, tfgtfmthesisuam.loa, tfgtfmthesisuam.gnuploterrors , tfgtfmthesisuam.mw, tfgtfmthesisuam.fdb_latexmk ]}
+% arara: pdflatex: {shell: yes}
+% arara: makeglossaries
+% arara: makeindex: {style: tfgtfmthesisuam.ist }
+% !arara: bibtex
+% arara: pdflatex: {shell: yes}
+% arara: pdflatex: {shell: yes}
+% arara: clean: {files: [tfgtfmthesisuam.aux, tfgtfmthesisuam.idx, tfgtfmthesisuam.ilg, tfgtfmthesisuam.ind, tfgtfmthesisuam.bbl, tfgtfmthesisuam.bcf, tfgtfmthesisuam.blg, tfgtfmthesisuam.run.xml, tfgtfmthesisuam.fdb_latexmk, tfgtfmthesisuam.fls, tfgtfmthesisuam.loe, tfgtfmthesisuam.lof, tfgtfmthesisuam.lol, tfgtfmthesisuam.lot, tfgtfmthesisuam.ltb, tfgtfmthesisuam.out, tfgtfmthesisuam.toc, tfgtfmthesisuam.upa, tfgtfmthesisuam.upb, tfgtfmthesisuam.acn, tfgtfmthesisuam.acr, tfgtfmthesisuam.alg, tfgtfmthesisuam.glg, tfgtfmthesisuam.glo, tfgtfmthesisuam.gls, tfgtfmthesisuam.glsdefs, tfgtfmthesisuam.idx,  tfgtfmthesisuam.ilg, tfgtfmthesisuam.xdy, tfgtfmthesisuam.loa, tfgtfmthesisuam.gnuploterrors , tfgtfmthesisuam.mw, tfgtfmthesisuam.fdb_latexmk ]}
+
+
+\documentclass[epsbased,copyleft,final,printable,covers,extendedindex,firstnumbered,tfg, english]{tfgtfmthesisuam}
+
+
+\author{Pablo Marcos Manchón}
+\advisor{Alberto Suárez González}
+\levelin{Mathematics and Computer Science}
+\title{Functional data analysis}
+\subtitle{interpolation, registration and nearest neighbors in scikit-fda}
+
+
+\copyrightdate{June 2019}
+
+\dedication{A mi mujer y a mis hijos}
+\famouscite{Lo peor es cuando has terminado un capítulo\\y la máquina de escribir no aplaude. \\[0.1em] \begin{flushright}Orson Welles\end{flushright}}
+%\prefacefile{inicio/prefacio}
+
+\ackfile{text/0-acknowledgments}
+\abstractfile{text/0-abstract}
+\resumenfile{text/0-resumen}
+\keywords{List of keywords}
+\palabrasclave{Lista de palabras}
+
+\keywords{Algunas}
+\palabrasclave{Otras}
+
+
+
+%\bibliographyconfig{tfgtfmthesisuam}
+
+%\datadir{data}
+%\graphicsdir{img}
+%\logosdir{img}
+%\codesdir{codes}
+
+\begin{document}
+
+\chapter{Introduction\label{CAP:INTRODUCTION}}{text/1-introduction.tex}
+  \section{Motivation\label{SEC:MOTIVATION}}{text/1-introduction.tex}
+  \section{Goals and scope\label{SEC:GOALS}}{text/1-introduction.tex}
+  \section{Document Structure\label{SEC:STRUCTURE}}{text/1-introduction.tex}
+
+
+
+\end{document}
