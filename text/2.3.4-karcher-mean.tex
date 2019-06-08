@@ -4,18 +4,17 @@ $\bar x = \frac{1}{N}\sum_{i=1}^{N} x_i$ is used to estimate the central
 tendency of the data. This mean minimizes the sum of square distances.
 
 In the functional case, the mean function will have this property thus if
-${f_i}_{i=1}^{N} \subset \mathbb{L}^2$ is a set of functional observations,
-their mean $\bar \f(t) = \frac{1}{N}\sum_{i=1}^{N} f_i(t)$ will minimize
+$\{f_i\}_{i=1}^{N} \subset \mathbb{L}^2$ is a set of functional observations,
+their mean $\bar f(t) = \frac{1}{N}\sum_{i=1}^{N} f_i(t)$ will minimize
 $\sum_{i=1}^{N}\|f_i - \bar f\|_{\mathbb{L}^2}$.
 
 We are interested in extend this idea to general metrics spaces.
-Let $(X, d)$ be a metric space and $\{x_i\}{ i=1}^{N}$ random points in $X$.
-We will defined the Fréchet variance of a point $p \in X$ as
-$\Psi(p)=\sum_{i=1}^{N} d^{2}\left(p, x_{i}\right)$.
+Let $(X, d)$ be a metric space and $\{x_i\}_{i=1}^{N}$ random points in $X$.
+The Fréchet variance of a point $p \in X$ as $\Psi(p)=\sum_{i=1}^{N} d^{2}\left(p, x_{i}\right)$.
 
 The Fréchet mean of these random points will be defined as the element $m \in X$
 which globally minimizes the Fréchet Variance. If this global minimum does not
-$exist, we will call Karcher means to the points that locally minimizes
+exist, we will call Karcher means to the points that locally minimizes
 $\Psi(p)$, i. e.,
 
 $$
@@ -24,26 +23,21 @@ $$
 
 These Karcher means will be able to better capture the geometry of our problem
 than usual mean, as it is shown in the figure \ref{SBFIG:KARCHER2}, where it is
-used a Karcher mean on $\mathscr{A}$.
+used a Karcher mean on $\mathscr{A}$. To calculate this mean it is used the DPA algorithm explained in the appendix B.2.
 
 \begin{figure}[Karcher mean of bimodal dataset]{FIG:KARCHER}{Karcher mean of bimodal dataset}
-  \subfigure[SBFIG:KARCHER1]{Dataset of bimodal samples}{\image{7cm}{}{0-empty}} \quad
-  \subfigure[SBFIG:KARCHER2]{Usual mean and Karcher mean on $\mathscr{A}$}{\image{7cm}{}{0-empty}}
+  \subfigure[SBFIG:KARCHER1]{Dataset of unimoal samples}{\image{7cm}{}{0-empty}} \quad
+  \subfigure[SBFIG:KARCHER2]{Usual mean and Karcher mean on $\mathscr{A}$}{\image{7cm}{}{0-empty}} \\
+  \subfigure[SBFIG:RANK1]{Ranked by elastic distance}{\image{7cm}{}{0-empty}} \quad
+  \subfigure[SBFIG:RANK2]{Ranked by phase distance}{\image{7cm}{}{0-empty}}
 \end{figure}
-
-To calculate this mean we will use the DPA algorithm explained in the appendix B.2.
 
 As an example of the behavior of these means with different metrics, we may
 measure the centrality of an observation in a dataset using its distance to the
-Karcher mean. In the figure \ref{RANK} it is used this idea to rank a dataset of
+Karcher mean. In the figure \ref{KARCHER} it is used this idea to rank a dataset of
 unimodal samples. Reddish colors indicate higher centrality of a sample, i.e.,
 a smaller distance to the mean, and lighter colors indicates outlier samples.
 In the figure \ref{SBFIG:RANK1} it is used the amplitude distance, and their
 corresponding Karcher mean. We can observe that the location of the mode in a
 sample does not affect its centrality, in contrast to the phase distance,
-as it is shown in the figure \ref{SBFIG:RANK2}.s
-
-\begin{figure}[Dataset ranked by distance to the Karcher mean]{FIG:RANK}{Dataset ranked by distance to the Karcher mean}
-  \subfigure[SBFIG:RANK1]{Elastic distance}{\image{7cm}{}{0-empty}} \quad
-  \subfigure[SBFIG:RANK"]{Phase distance}{\image{7cm}{}{0-empty}}
-\end{figure}
+as it is shown in the figure \ref{SBFIG:RANK2}.

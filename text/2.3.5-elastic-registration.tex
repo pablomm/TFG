@@ -25,7 +25,7 @@ $\gamma_{i}=\operatorname{arginf}_{\gamma \in \Gamma}\left\|\tilde{q}-
 \left(q_{i}, \gamma\right)\right\|$.
 
 \begin{figure}[Scheme of the elastic registration procedure]{FIG:SCHEME}{Scheme of the elastic registration procedure.}
-  \begin{tikzcd}
+  \begin{tikzcd}[scale=2]
     {\mathscr{F}}  \arrow[bend left=60]{r}{q_i} &
     {\mathbb{L}^2} \arrow[bend left=60]{r}{[q_i]} \arrow[bend left=60]{l}{\tilde \mu_f } &
     {\mathscr{A} } \arrow[bend left=60]{l}{\tilde \mu_q}
@@ -38,14 +38,13 @@ appendix B.3. The center of the orbit will be
 $\tilde \mu_q = (\mu_q , {\bar \gamma}^{-1})$.
 
 The mean of the relative phases with respect to $\tilde \mu_q$, will be the
-identity, thus
-
-$$
-\bar {\{  \gamma_i \circ {\bar \gamma}^{-1}  \}} =
-operatorname{arginf}_{\gamma \in \Gamma}d_{FR}(\gamma_i \circ {\bar \gamma}^{-1}, gamma) =
-operatorname{arginf}_{\gamma \in \Gamma}d_{FR}(\gamma_i \circ {\bar \gamma}^{-1} \circ \bar \gamma, gamma \circ \bar \gamma) =
-operatorname{arginf}_{\gamma \in \Gamma}d_{FR}(\gamma_i, gamma \circ \bar \gamma) = \gamma_{id}.
-$$
+identity, thus \\
+$
+%\bar {\{  \gamma_i \circ {\bar \gamma}^{-1}  \}} =
+\operatorname{arginf}_{\gamma \in \Gamma}d_{FR}(\gamma_i \circ {\bar \gamma}^{-1}, \gamma) =
+\operatorname{arginf}_{\gamma \in \Gamma}d_{FR}(\gamma_i \circ {\bar \gamma}^{-1} \circ \bar \gamma, \gamma \circ \bar \gamma) =
+\operatorname{arginf}_{\gamma \in \Gamma}d_{FR}(\gamma_i, \gamma \circ \bar \gamma) = \gamma_{id}.
+$
 
 Finally, we will construct the template to which the samples will be aligned,
 called elastic mean,
