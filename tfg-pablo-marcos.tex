@@ -1,6 +1,7 @@
 
 \documentclass[epsbased,copyleft,final,extendedindex,firstnumbered,tfg, english]{tfgtfmthesisuam}
 
+\usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{mathrsfs}
@@ -12,7 +13,7 @@
 \advisor{Alberto Suárez González}
 \levelin{Mathematics and Computer Science}
 \title{Functional data analysis: interpolation, registration and nearest neighbors in scikit-fda}
-\subtitle{}
+%\subtitle{}
 
 
 \copyrightdate{June 2019}
@@ -41,42 +42,55 @@ interpolación, registro, vecinos próximos, python}
 \begin{document}
 
 \chapter{Introduction\label{CAP:INTRODUCTION}}{text/1-introduction}
-  \section{Motivation\label{SEC:MOTIVATION}}{text/1.1-motivation}
-  \section{Goals and scope\label{SEC:GOALS}}{text/1.2-goals}
-  \section{Document Structure\label{SEC:STRUCTURE}}{text/1.3-structure}
+\section{Motivation\label{SEC:MOTIVATION}}{text/1.1-motivation}
+\section{Goals and scope\label{SEC:GOALS}}{text/1.2-goals}
+\section{Document Structure\label{SEC:STRUCTURE}}{text/1.3-structure}
 
 
 \chapter{State of the art\label{CAP:STATEOFART}}{text/2-state-of-the-art}
 
-  \section{Functional data representation\label{SEC:REPRESENTATION}}{text/2.1-representation}
-    \subsection{Interpolation\label{SEC:INTERPOLATION}}{text/2.1.1-interpolation}
-      \subsubsection{Linear interpolation\label{SSEC:LINEAR}}{text/2.1.1.1-linear-interpolation}
-      \subsubsection{Spline interpolation\label{SSEC:SPLINES}}{text/2.1.1.2-spline-interpolation}
-      \subsubsection{Smoothing spline interpolation\label{SSEC:SSPLINES}}{text/2.1.1.3-smoothing-splines}
+\section{Functional data representation\label{SEC:REPRESENTATION}}{text/2.1-representation}
+  \subsection{Interpolation\label{SEC:INTERPOLATION}}{text/2.1.1-interpolation}
+    \subsubsection{Linear interpolation\label{SSEC:LINEAR}}{text/2.1.1.1-linear-interpolation}
+    \subsubsection{Spline interpolation\label{SSEC:SPLINES}}{text/2.1.1.2-spline-interpolation}
+    \subsubsection{Smoothing spline interpolation\label{SSEC:SSPLINES}}{text/2.1.1.3-smoothing-splines}
 
-  \section{Registration\label{SEC:REGISTRATION}}{text/2.2-registration}
-    \subsection{Shift registration\label{SEC:SHIFT}}{text/2.2.1-shift-registration}
-    \subsection{Warping functions\label{SEC:WARPING}}{text/2.2.2-warping-functions}
-    \subsection{Landmark registration\label{SEC:LANDMARK}}{text/2.2.3-landmark-registration}
-    \subsection{Pairwise and groupwise alignment\label{SEC:L2PAIRWISE}}{text/2.2.4-pairwise-groupwise}
-      \subsubsection{Pinching effect\label{SSEC:PINCHING}}{text/2.2.4.1-pinching-effect}
-      \subsubsection{Lack of symmetry\label{SSEC:SIMMETRY}}{text/2.2.4.2-lack-of-symmetry}
-    \subsection{Amplitude phase decomposition\label{SEC:DECOMPOSITION}}{text/2.2.5-decomposition}
+\section{Registration\label{SEC:REGISTRATION}}{text/2.2-registration}
+  \subsection{Shift registration\label{SEC:SHIFT}}{text/2.2.1-shift-registration}
+  \subsection{Warping functions\label{SEC:WARPING}}{text/2.2.2-warping-functions}
+  \subsection{Landmark registration\label{SEC:LANDMARK}}{text/2.2.3-landmark-registration}
+  \subsection{Pairwise and groupwise alignment\label{SEC:L2PAIRWISE}}{text/2.2.4-pairwise-groupwise}
+    \subsubsection{Pinching effect\label{SSEC:PINCHING}}{text/2.2.4.1-pinching-effect}
+    \subsubsection{Lack of symmetry\label{SSEC:SIMMETRY}}{text/2.2.4.2-lack-of-symmetry}
+  \subsection{Amplitude phase decomposition\label{SEC:DECOMPOSITION}}{text/2.2.5-decomposition}
 
-    \section{Elastic methods in functional data analysis\label{SEC:ELASTIC}}{text/2.3-elastic-analysis}
-      \subsection{Fisher-Rao metric\label{SEC:FISHERRAO}}{text/2.3.1-fisher-rao}
-      \subsection{Amplitude and phase spaces\label{SEC:AMPPHA}}{text/2.3.2-amp-pha-spaces}
-      \subsection{Pairwise alignment\label{SEC:PAIRWISE}}{text/2.3.3-pairwise}
-      \subsection{Karcher means\label{SEC:KARCHER}}{text/2.3.4-karcher-mean}
-      \subsection{Elastic registration\label{SEC:ELASTICREG}}{text/2.3.5-elastic-registration}
-      \subsection{Restricting elasticity\label{SEC:RESTRICT}}{text/2.3.6-elasticity}
+\section{Elastic methods in functional data analysis\label{SEC:ELASTIC}}{text/2.3-elastic-analysis}
+  \subsection{Fisher-Rao metric\label{SEC:FISHERRAO}}{text/2.3.1-fisher-rao}
+  \subsection{Amplitude and phase spaces\label{SEC:AMPPHA}}{text/2.3.2-amp-pha-spaces}
+  \subsection{Pairwise alignment\label{SEC:PAIRWISE}}{text/2.3.3-pairwise}
+  \subsection{Karcher means\label{SEC:KARCHER}}{text/2.3.4-karcher-mean}
+  \subsection{Elastic registration\label{SEC:ELASTICREG}}{text/2.3.5-elastic-registration}
+  \subsection{Restricting elasticity\label{SEC:RESTRICT}}{text/2.3.6-elasticity}
 
-    \section{Nearest neighbors\label{SEC:NEIGHBORS}}{text/2.4-nearest-neighbors}
-    \subsection{Nearest neighbor search\label{SEC:SEARCH}}{text/2.4.1-nn-search}
-    \subsection{Classification\label{SEC:SEARCH}}{text/2.4.2-classification}
-    \subsection{Regression\label{SEC:SEARCH}}{text/2.4.3-regression}
+\section{Nearest neighbors\label{SEC:NEIGHBORS}}{text/2.4-nearest-neighbors}
+  \subsection{Nearest neighbor search\label{SEC:SEARCH}}{text/2.4.1-nn-search}
+  \subsection{Classification\label{SEC:SEARCH}}{text/2.4.2-classification}
+  \subsection{Regression\label{SEC:SEARCH}}{text/2.4.3-regression}
 
 
+\chapter{Design and development\label{SEC:DESIGNDEV}}{text/3-design-development}
+
+\section{Analysis\label{SEC:ANALYSIS}}{text/3.1-analysis}
+\section{Analysis\label{SEC:DESIGN}}{text/3.2-design}
+  \subsection{Representation module\label{SEC:REPRMOD}}{text/3.2.1-representation}
+  \subsection{Representation module\label{SEC:PREPMOD}}{text/3.2.2-preprocessing}
+  \subsection{Representation module\label{SEC:MLMOD}}{text/3.2.3-ml}
+  \subsection{Representation module\label{SEC:MISCMOD}}{text/3.2.4-misc}
+  \subsection{Representation module\label{SEC:DATAMOD}}{text/3.2.5-dataset}
+\section{Analysis\label{SEC:CODING}}{text/3.3-coding-docs-tests}
+\section{Analysis\label{SEC:DEVELOPMENT}}{text/3.4-development-ci-cv}
+
+\chapter{Conclusions and future work\label{SEC:CONCLUSIONS}}{text/4-conclusions}
 
 
 

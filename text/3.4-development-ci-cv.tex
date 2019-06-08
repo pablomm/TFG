@@ -1,0 +1,42 @@
+During the development of the package has been used an agile methodology, with
+similar precepts than the eXtreme programming [Blankenship J., Bussa M.,
+Millett S. (2011) eXtreme Programming. In: Pro Agile .NET Development with
+Scrum. Chapter 3. Apress, Berkeley, CA. (pp. 29-51)], which is based on
+simplicity in development, continuous feedback and communication between
+team members.
+
+For this communication in conjunction with version control git has been using,
+along with the functionalities available in Github. This platform offers a
+series of tools for the review and control of contributions. There are multiple
+workflows designed to carry out version control with git, of which we employ
+Gitflow.
+
+Gitflow is a widely used workflow, which uses git branches to organize the work.
+It structures the code around two main branches: master and develop. The first
+is a stable branch, where any built-in commit must be ready to go into
+production and generates a new version. The second one, develop, is the code
+that will make up the next planned version of the project. To add new code to
+these branches, it is necessary to create other auxiliary ones that will be
+merged to develop by means of a pull request, after a review process and pass
+the bench tests. Figure \ref{FIG:GITFLOW} illustrates the mechanics of this
+workflow.
+
+
+\begin{figure}[Example of git flow branches]{FIG:GITFLOW}{Example of git flow branches}
+  \image{7cm}{}{0-empty}
+\end{figure}
+
+
+One of the main advantages of using github, over other version control systems,
+is the possibility of using a continuous integration mechanism. Travis CI has
+been used for this purpose, which compiles the library and runs the bench tests
+each time a commit is made, as in figure \ref{FIG:CHECKS}, where it may be seen a red cross
+or a green tick associated to each commit depending on the bench tests. In
+addition, it can also automate a wide variety of tasks, such as generating the
+documentation, compiling or integrating style reviewers.
+
+\begin{figure}[Example of travis checks]{FIG:CHECKS}{Example of travis checks}
+  \image{7cm}{}{0-empty}
+\end{figure}
+
+* Picture from https://es.atlassian.com/git, licensed under a Creative Commons Attribution 2.5 Australia License.
