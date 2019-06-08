@@ -1,0 +1,24 @@
+In the regression problem, each of the training samples $\mathcal{X}_i$ have a
+response $Y_i$ associated with them. This response can be either scalar or
+functional, although the way to proceed will be similar.
+
+In both cases, it will be necessary to select the responses associated with the
+elements of the neighborhood $k(x)$, which will be used to predict the response
+of the datum $x$.
+
+In the scalar response case, a weighted average of the neighbors’ responses
+$Y_i$ will be used, so that  the prediction will be calculated as
+
+$$
+\hat Y = \sum_{(X_i, Y_i) : X_i \in k(x)} w_i Y_i \, ,
+$$
+
+where $\sum w_i = 1$.
+
+As with the sorting problem, weights may be chosen based on distance or
+uniformly.
+
+In the case where the responses $\mathcal{Y_i}$ are also functional data,
+the predicted response will be constructed in a similar way as in the previous
+case, using a weighted average of functions, or a centroid, such as the
+Karcher means presented in section \ref{SEC:ELASTICREG}.
