@@ -3,5 +3,7 @@
 import matplotlib.pyplot as plt
 
 plt.figure("0-empty")
-plt.text(.5, .5, "Figure", horizontalalignment='center')
+plt.xlim(0, 1)
+plt.ylim(0, 1)
+
 plt.show()
