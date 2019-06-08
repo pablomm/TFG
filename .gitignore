@@ -6,3 +6,8 @@
 *.pdf
 *.toc
 *.gz
+*.loa
+*.loe
+*.lol
+*.out
+*.mw

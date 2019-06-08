@@ -1,9 +1,9 @@
 Since our observations will be functions, dependent on one or several continuous parameters, such as the time in which a process takes place, it will be impossible to measure and store all the points which they are defined for.
 
-In practice, the information of a functional datum $x(t)$ is observed and recorded as pairs $x(t_j) = (t_j, y_j)$, where $y_j$ is a snatshoot of the function $x$ at t_j, possibly blurred by measurement error [Ref to ramsay].
+In practice, the information of a functional datum $x(t)$ is observed and recorded as pairs $x(t_j) = (t_j, y_j)$, where $y_j$ is a snatshoot of the function $x$ at $t_j$, possibly blurred by measurement error [Ref to ramsay].
 
-Although in FDA is also treated the case in which our data are multivariate functions, from  $\mathbb{R^n}$ to $\mathbb{R^m}$, in general, as a way of simplification, we will assume that our data are univariate functions $x:[a,b] \rightarrow :\mathbb{R}$.
+Although in FDA is also treated the case in which our data are multivariate functions, from  $\mathbb{R}^n$ to $\mathbb{R}^m$, in general, as a way of simplification, we will assume that our data are univariate functions.
 
 There are two main approaches to represent the data. The first, called discrete representation, stores a finite grid of pairs $(t_j, y_j)$ with the recorded values, but unlike multivariate statistics, the continuous dependence between $y_j$ and $t_j$ will be taken into account.
 
-The second one is a parametric approach, called basis representation, in which we will define a system of functions $\{Phi_n(t) \}{n=1}^N$, such as a truncated Fourier basis or a set of polynomials. This system will form a finite subspace of the original functional space, where we will project the observations, obtaining a representation associated to the coefficients of the basis $x(t) \approx \sum_{n=1}^N c_n\phi_n(t)$.
+The second one is a parametric approach, called basis representation, in which we will define a system of functions $\{\Phi_n(t) \}_{n=1}^N$, such as a truncated Fourier basis or a set of polynomials. This system will form a finite subspace of the original functional space, where we will project the observations, obtaining a representation associated to the coefficients of the basis $x(t) \approx \sum_{n=1}^N c_n\Phi_n(t)$.
