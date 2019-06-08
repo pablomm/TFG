@@ -16,16 +16,11 @@ zero crossings points. For instance, the population shown in figure
 
 
 The landmark registration process will require, for each observation $x_i$,
-the identification of the values $\{t_{ij}\{j=1}^{F}$ associated with each of
+the identification of the values $\{t_{ij}\}_{j=1}^{F}$ associated with each of
 the $F$ features, which will be aligned to a common point
 $\{t_{j}^*\}_{j=1}^{F}$. Once we have the landmarks points, we will build the
- warping functions so that $\gamma_i(t_j^*)=t_ij$, obtaining
-
-$$
-x_i^*(t_j^*) = x_i(\gamma_i(t_j^*)) = x_i(t_ij).
-$$
-
-A map between the old positions of the landmarks and the common ones is made.
+ warping functions so that $\gamma_i(t_j^*)=t_{ij}$, so that
+$x_i^*(t_j^*) = x_i(\gamma_i(t_j^*)) = x_i(t_{ij})$.
 
 Not all sets of populations have differentiated characteristics of this type,
 moreover, by taking into account only a limited number of points the resulting

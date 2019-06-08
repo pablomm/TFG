@@ -8,10 +8,10 @@ Let $\{x_i\}_{i=1}^n$ be a set of functional observations, which will be aligned
 using this transformation. We are actually interested in finding the values
 
 $$
-x_i^*(t)=x_i(t+ \sigma_i) \, i=1,2, \dots n
+x_i^*(t)=x_i(t+ \delta_i) \qquad i=1,2, \dots n
 $$
 
-where the shift parameter $\sigma_i$ is chosen in order to align the features of
+where the shift parameter $\delta_i$ is chosen in order to align the features of
 the curves. In the figure \ref{SBFIG:SHIFT2} it is shown the result of apply
 this type of transformation to the set of sinusoidal waves.
 
@@ -24,10 +24,9 @@ A possible solution for the calculation of shifts $\delta_i$, is using a least
 square criterion, defined as
 
 $$
-\text{REGSSE} = \sum_{i=1}{n}\int_{\mathcal{T}}\left [x_i(t+\delta_i) - \hat \mu(t) \right ]^2 dt
+\text{REGSSE} = \sum_{i=1}^{n}\int_{\mathcal{T}}\left [x_i(t+\delta_i) - \hat \mu(t) \right ]^2 dt
 $$
 
 The alignment problem will be based on finding the values $\delta_i$ that
-minimize this criterion. For this purpose, we will use the derivatives of the
-functions $x_i$, using a variation of the Newton-Rhapson method. A description
-of the algorithm used to calculate these values is given in the Appendix B.1 [***********].
+minimize $\mathbb{L}^2$ distance to the cross-sectional mean. For this purpose, we will use the derivatives of the functions $x_i$, using a variation of the
+Newton-Rhapson method. A description of the algorithm used to calculate these values is given in the Appendix B.1 [***********].

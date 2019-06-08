@@ -6,11 +6,7 @@ Let $f_1, f_2 \in \mathcal{F}$ be functional observations and
 $E: \mathcal{F} \times \mathcal{F} \rightarrow \mathbb{R}^+$ an energy
 functional. The alignment problem may be understood as the search of a warping
 function $\gamma^*$ which minimizes the energy between the two functions, i.e.,
-
-$$
-\gamma^* = argmin_{\gamma \in \Gamma} E[f_1, f_2 \circ \gamma] .
-$$
-
+$\gamma^* = \operatorname{argmin}_{\gamma \in \Gamma} E[f_1, f_2 \circ \gamma]$.
 When a warping $\gamma^*$ fulfills this property, we will say that $f_1$ is
 registered to $f_2 \circ \gamma^*$. In the figure 2.11 it is shown an example in
  which the distance $\mathbb{L}^2$ has been used as energy, defined as
@@ -30,20 +26,11 @@ technique to search the optimal path.
 
 Given a set of functions $\{f_i\}_{i=1}^n \subset \mathcal{F}$, the
 groupwise alignment problem will consist in the search of warping functions
-$\{\gamma_i^* \}_{i=1}^n \Subset \Gamma$ to align each of the functions with the
+$\{\gamma_i^* \}_{i=1}^n \subset \Gamma$ to align each of the functions with the
 rest of them. To achieve this, we will build a target function $\mu$, also
 called template, to which all the curves will be aligned. For instance,
 the cross-sectional mean of the functions may be used as target.
 
-To register each function we will search a warping $\gamma_i^*$ that minimizes
-the energy, i.e.,
-
-$$
-\gamma_i^* = argmin_{\gamma \in \Gamma} E[\mu, f_i \circ \gamma],
-$$
-
-as well as we did in the pairwise alignment.
-
 In practice, the metric $\mathbb{L}^2$ is not used as energy, because three
 problems will arise that will not make it adequate: the pinching effect, the
-lack of symmetry and the inverse inconsistency [REF to MAROON PAPER].
+lack of symmetry and the inverse inconsistency [REF MAROON].
