@@ -1,0 +1,20 @@
+
+Sometimes it is necessary to control the amount of elasticity during the
+registration process, for this purpose it is possible to add a penalty term
+$\mathcal{R}(\lambda)$ to the elastic distance.
+
+Given $\lambda > 0$ and two SRSFs $q_1, q_2 \in \mathbb{L}^2$, we will define
+the distance penalized elastic distance as
+
+$$
+d_{\lambda}\left(q_{1}, q_{2}\right) \equiv \inf _{\gamma \in \Gamma}\left(
+\| q_{1}-\left(q_{2} \circ \gamma\right) \sqrt{\dot{\gamma}}\right)\left\|^{2}+
+\lambda\right\| \sqrt{\dot{\gamma}}-1 \|^{2} )^{(1 / 2)}.
+$$
+
+As an example, it is shown the result of the alignment of two functions with different penalties in the figure
+\ref{FIG:PENALTY}.
+
+\begin{figure}[Penalized elastic registration]{FIG:PENALTY}{Penalized elastic registration}
+  \image{7cm}{}{0-empty}
+\end{figure}
