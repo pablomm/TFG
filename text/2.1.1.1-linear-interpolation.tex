@@ -2,12 +2,12 @@
 Given two points $t_k$ and $t_{k+1}$ for which the values of our function are
 known, denoted by $y_k$ and $y_{k+1}$, we can use a line segment to join these
 values as a first approach. Using this type interpolation, we will obtain a
-piecewise linear function, whose value in the interval $[t_k, t_{k+1}]$ will
+piecewise linear function, whose values in the interval $[t_k, t_{k+1}]$ will
 be given by
 
-$$
-x(t)= y_{k}+\frac{y_{k+1}-y_{k}}{t_{k+1}-t_{k}}\left(t-t_{k}\right).
-$$
+\begin{equation}[]{Linear interpolation}
+ x(t)= y_{k}+\frac{y_{k+1}-y_{k}}{t_{k+1}-t_{k}}\left(t-t_{k}\right).
+\end{equation}
 
 In the case of multivariate functions, multilinear interpolation
 [ref to multilinear interpolation] generalizes this method to higher dimensions.
