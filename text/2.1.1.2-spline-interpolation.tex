@@ -8,15 +8,15 @@ $\mathcal{C}^{n-1}[a,b]$. This fact will be crucial in FDA, because we will need
 to use derivatives in many phases of the analysis.
 
 \begin{figure}[Example of spline interpolation]{FIG:SPLINE}{Example of spline interpolation}
-	\subfigure[SBFIG:SPLINE1]{Spline interpolation}{\image{7cm}{}{spline-interpolation}} \quad
-	\subfigure[SBFIG:SPLINE2]{First derivatives}{\image{7cm}{}{spline-derivatives-interpolation}}
+	\subfigure[SBFIG:SPLINE1]{Spline interpolation}{\image{7.5cm}{}{spline-interpolation}} \quad
+	\subfigure[SBFIG:SPLINE2]{First derivatives}{\image{7.5cm}{}{spline-derivatives-interpolation}}
 \end{figure}
 
 To achieve this, we will have to match the values of the derivatives of the
 adjacent splines in the interpolation knots. If we denote by
 $p_k(t)=\sum_{j=0}^n c_{jk} t^k$ to the spline defined in the region
 $[t_{k-1}, t_{k}]$, during the calculation of the coefficients $c_{jk}$, we must
-impose the restriction $p_{k}^{(d)}(t_k) = p_{k+1}^{(d)}$ for $d=1, \dots, n-1$.
+impose the restriction $p_{k}^{(d)}(t_k) = p_{k+1}^{(d)}$ for \\ $d=1, \dots, n-1$.
 For this purpose, we will define a linear system of equations which will be
 solved iteratively. Figure \ref{SBFIG:SPLINE1} shows the result of interpolate a
 temporal series using splines of different orders, and the first derivatives of
@@ -24,8 +24,8 @@ these splines, which are splines of order $n-1$ due to the derivation of the
 polynomials.
 
 \begin{figure}[Interpolation of surface]{FIG:BISPLINE}{Interpolation of surface with bicubic splines}
-	\subfigure[SBFIG:BISPLINE1]{Surface interpolated}{\image{7cm}{}{surface-bicubic}} \quad
-	\subfigure[SBFIG:BISPLINE2]{Partial derivative $\partial_x$}{\image{7cm}{}{surface-bicubic-dx}}
+	\subfigure[SBFIG:BISPLINE1]{Surface interpolated}{\image{7.5cm}{}{surface-bicubic}} \quad
+	\subfigure[SBFIG:BISPLINE2]{Partial derivative $\partial_x$}{\image{7.5cm}{}{surface-bicubic-dx}}
 \end{figure}
 
 We can extend spline interpolation for multivariate functions, such as surfaces,

@@ -2,6 +2,11 @@ In several contexts, the functional data will present noise, due to the
 measurement procedure or to the intrinsic random behaviour of the process,
 this will motivate the use of smoothing splines.
 
+\begin{figure}[Example of smoothing]{FIG:SMOOTHING}{Smoothing interpolation}
+	\subfigure[SBFIG:SMOOTHING1]{Cubic smoothing}{\image{7.5cm}{}{smoothing-splines}} \quad
+	\subfigure[SBFIG:SMOOTHING2]{Several values of the smoothing factor}{\image{7.5cm}{}{smoothing-splines-values}}
+\end{figure}
+
 This method is a variation of the spline interpolation, but we will not
 use directly the points $\{t_k\}_{k=1}^{N}$ as knots. Instead, we will use a
 smaller set of knots $\{\tilde t_k\}_{k=1}^{M}$, generally different from the
@@ -11,7 +16,4 @@ splines will be defined using spline interpolation on the set of knots
 $(\tilde t_k, \tilde y_k)$. Figure \ref{FIG:SMOOTHING} shows the smoothing
 interpolation of a noisy observation.
 
-\begin{figure}[Example of smoothing]{FIG:SMOOTHING}{Smoothing interpolation}
-\subfigure[SBFIG:SMOOTHING1]{Cubic smoothing}{\image{7cm}{}{smoothing-splines}} \quad
-\subfigure[SBFIG:SMOOTHING2]{Several values of the smoothing factor}{\image{7cm}{}{smoothing-splines-values}}
-\end{figure}
+
