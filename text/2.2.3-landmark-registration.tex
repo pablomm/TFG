@@ -10,8 +10,8 @@ zero crossings points. For instance, the population shown in figure
 
 
 \begin{figure}[Shift registration of a dataset]{FIG:LANDMARK}{Shift registration of a dataset}
-  \subfigure[SBFIG:LANDMARK1]{Unregistered dataset $x_i(t)$}{\image{7cm}{}{0-empty}} \quad
-  \subfigure[SBFIG:LANDMARK2]{Registered population $x^*_i(t)$}{\image{7cm}{}{0-empty}}
+  \subfigure[SBFIG:LANDMARK1]{Unregistered dataset $x_i(t)$}{\image{7cm}{}{landmark-registered}} \quad
+  \subfigure[SBFIG:LANDMARK2]{Registered population $x^*_i(t)$}{\image{7cm}{}{landmark-registration}}
 \end{figure}
 
 
@@ -19,7 +19,7 @@ The landmark registration process will require, for each observation $x_i$,
 the identification of the values $\{t_{ij}\}_{j=1}^{F}$ associated with each of
 the $F$ features, which will be aligned to a common point
 $\{t_{j}^*\}_{j=1}^{F}$. Once we have the landmarks points, we will build the
- warping functions so that $\gamma_i(t_j^*)=t_{ij}$, so that
+ warping functions so that $\gamma_i(t_j^*)=t_{ij}$, thus
 $x_i^*(t_j^*) = x_i(\gamma_i(t_j^*)) = x_i(t_{ij})$.
 
 Not all sets of populations have differentiated characteristics of this type,

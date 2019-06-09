@@ -55,10 +55,9 @@ for this reason we will introduce the \textbf{square root slope function} (SRSF)
 transform, which will greatly simplify this computation.
 
 \begin{figure}[Geodesic path in $\mathcal{F}$]{FIG:GEODESIC}{Geodesic path in $\mathcal{F}$ and the corresponding SRSF's}
-  \subfigure[SBFIG:GEODESIC1]{Geodesic path between $f_1$ and $f_2$}{\image{7cm}{}{0-empty}} \quad
-  \subfigure[SBFIG:GEODESIC2]{SRSF of the path}{\image{7cm}{}{0-empty}}
+  \subfigure[SBFIG:GEODESIC1]{Some steps of the geodesic path between $f_1$ and $f_2$}{\image{7cm}{}{geodesic}} \quad
+  \subfigure[SBFIG:GEODESIC2]{SRSF of the path}{\image{7cm}{}{srsf-geodesic}}
 \end{figure}
-
 
 Given $f \in \mathcal{F}$, its SRSF is defined as
 $SRSF\{f\} = \operatorname{sgn}{(\dot f)} \sqrt{\dot f}$. To simplify notation, in the
@@ -75,6 +74,9 @@ Taking advantage of this characterization we will take our functions to the
 SRSF's space to perform our analysis efficiently, and then transform the result
 to the original space, because the SRSF establishes a map up to constant between
 $\mathcal{F}$ and the space of SRSF's with the $\mathbb{L}^2$ metric.
+A consequence of this is that the computation of geodesics shown in
+\{FIG:GEODESIC} becomes in a straight line
+between SRSFS, $\alpha(\tau) = (1 - \tau)q_1 + \tau q_2$ \, 0 \le \tau \le 1.
 
 Given $\gamma \in \Gamma$. When it is calculated the SRSF of $f \circ \gamma$,
 due to the chain rule, we can observe that

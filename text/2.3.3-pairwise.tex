@@ -4,13 +4,17 @@ pairwise alignment problem, as presented in section \ref{SEC:L2PAIRWISE},
  that avoids all the problems associated with the metric $\mathbb{L}^2$.
 
 Given $f_1, f_2 \in \mathscr{F}$, to register $f_1$ to $f_2$ the Fisher-Rao distance
-will be minimized, as energy term, i.e., the warping used in the alignment will be
+will be minimized, as energy term, i.e., according to [ref to equation]
+the warping used in the alignment will be
 
 $$
 \gamma^{*}= \operatorname{argmin}_{\gamma \in \Gamma} d_{FR}[f_1 \circ \gamma,
 f_2] = \operatorname{argmin}_{\gamma \in \Gamma} \|
 (q_1, \gamma) - q_2 \|_{\mathbb{L}^2}.
 $$
+
+The energy used to align the functions in figure \ref{SBFIG:PAIRWISE1} was
+actually this.
 
 We will have a property of symmetry, since
 $E[f_1, f_2] = E[f_1 \circ \gamma, f_2 \circ \gamma]$, the warping used to
@@ -24,8 +28,8 @@ warping needed to register $f_2$ to $f_1$  is ${\gamma^*}^{-1}$.
 
 %%, as it is shown in \ref{FIG:INVERSE}.
 %\begin{figure}[Inverse consistency of pairwise alignment]{FIG:INVERSE}{Inverse consistency of pairwise alignment}
-%  \subfigure[SBFIG:INVERSE1]{Alignment of $f_1$ to $f_2$}{\image{7cm}{}{0-empty}} \quad
-%  \subfigure[SBFIG:INVERSE1]{Alignment of $f_2$ to $f_1s$}{\image{7cm}{}{0-empty}}
+%  \subfigure[SBFIG:INVERSE1]{Alignment of $f_1$ to $f_2$}{\image{7cm}{}{pairwise-alignment}} \quad
+%  \subfigure[SBFIG:INVERSE1]{Alignment of $f_2$ to $f_1s$}{\image{7cm}{}{pairwise-alignment-inverse}}
 %\end{figure}
 
 In addition, the so-called pinching effect will not appear, due to the term
