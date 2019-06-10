@@ -11,43 +11,69 @@ $x_i$, so it will be crucial a previous smoothing step of the samples.
 
 Derivatives of REGGSE are given by:
 
-\begin{equation}
+\begin{equation}[EQ:FIRST]{First derivative of REGSSE}
 \frac{\partial}{\partial \delta_i} \text{REGSSE} = 2 \int_{\mathcal{T}}
 \left [ x_i(t + \delta_i) - \hat \mu(t) \right ] Dx_i(t) dt,
 \end{equation}
 
-\begin{equation}[EQ:SECOND]{}
+\begin{equation}[EQ:SECOND]{Second derivative of REGSSE}
 \frac{\partial^2}{\partial \delta^2_i} \text{REGSSE} = 2
 \int_{\mathcal{T}} \left [ x_i(t + \delta_i) - \hat \mu(t) \right ]
 D^2x_i(t) dt + 2 \int_{\mathcal{T}} \left [  Dx_i(t)^2 \right ]  dt.
 \end{equation}
 
-In practice the second term of $\frac{partial^2}{partial \delta^2_i}$
-(\ref{EQ:SECOND}), because when the misalignment of the samples is large it
+In practice the first term of $\frac{\partial^2}{\partial \delta^2_i}\textbf{REGSSE}$
+(\ref{EQ:SECOND}) it is deleted, because when the misalignment of the samples is large it
 can affect the convergence of the algorithm, and vanishes for the values that
 minimize the criterion. Therefore the following approximation is used:
 
-\begin{equation}
+\begin{equation}[]{Aproximation of second derivative of REGSSE}
 \frac{\partial^2}{\partial \delta^2_i} \text{REGSSE} \approx  
 2 \int_{\mathcal{T}} \left [  Dx_i(t)^2 \right ]  dt.
 \end{equation}
 
-The algorithm for optimization is as follows:
+\begin{algorithmN}[ALG:NEWTON]{Shift registration by Rhapson-Newton algorithm}{Shift registration by Rhapson-Newton algorithm}
+	\SetKwData{delta0}{$\delta{(0)}$}
+	\SetKwData{This}{this}
+	\SetKwData{Up}{up}
+	\SetKwFunction{Union}{Union}
+	\SetKwFunction{FindCompress}{FindCompress}
+	\SetKwInOut{Input}{Input}
+	\SetKwInOut{Output}{Output}
+	\Input{Set of functional observations $\{x_i(t)\}_{i=1}^{n}$}
+	\Output{Shifts $\{\delta_i\}_{i=1}^{n}$ used to register the data}
+	\BlankLine
+	Initialize $\delta^{(0)}$ \;
+	
+	\For{step $\nu = 1, 2, \dots$ until stop criterion}{
+		\emph{Update cross-sectional mean}
+		
+		$\hat \mu(t) \leftarrow \frac{1}{n} \sum_{i=1}^{n} x_i(t + \delta_i^{(\nu -1)})$
+		
+		\lForEach{$\delta_i ^{(\nu - 1)}$}{
+			
+			\emph{Update values of $\delta_i$}
+			
+			$\delta_i ^{(\nu)} \leftarrow \delta_i ^{(\nu - 1)} - \alpha {\frac{\partial}{\partial \delta_i}  REGSSE} / {\frac{\partial^2}{\partial \delta^2_i} REGSSE}$
+		}
+	}
+\end{algorithmN}
 
-Step 0:
+%Step 0:
+%
+%Initialize  \delta_i ^{(0)}
+%
+%Step \nu: for \nu=1,2,3,…
+%
+%\hat \mu   <- \frac{1}{N} \sum x_i(t + \delta_i^{(\nu -1)})
+%\delta_i ^{(\nu)} = \delta_i ^{(\nu - 1)} - \alpha \frac{\frac{\partial}{\partial \delta_i}  REGSSE}{\frac{\partial^2}{\partial \delta^2_i} REGSSE}
 
-Initialize  \delta_i ^{(0)}
 
-Step \nu: for \nu=1,2,3,…
-
-\hat \mu   <- \frac{1}{N} \sum x_i(t + \delta_i^{(\nu -1)})
-\delta_i ^{(\nu)} = \delta_i ^{(\nu - 1)} - \alpha \frac{\frac{\partial}{\partial \delta_i}  REGSSE}{\frac{\partial^2}{\partial \delta^2_i} REGSSE}
-
-
-The initilization of $\delta_i ^{(0)}$ may be set to minimize some feature, or
-simply set $delta_i ^{(0)}$ to $0$.
+The initilization of $\delta_i ^{(0)}$  in \ref{ALG:NEWTON} may be set to minimize some feature, or
+simply set $\delta_i ^{(0)}$ to $0$.
 
 Could be used as stop criterion a maximun value of iterations along with a
-tolerance $| \delta_i ^{(\nu)} - \delta_i ^{(\nu-1)} | < \epsilon$.
+tolerance \\ $| \delta_i ^{(\nu)} - \delta_i ^{(\nu-1)} | < \epsilon$.
 Generally the convergence is fast, obtaining good alignments with one or two
-iteration with a reasonable estimation of the initial values $\delta_i ^{(0)}$.
+iteration with a reasonable estimation of the initial values $\delta_i ^{(0)}$. The step size
+$\alpha$ in \ref{ALG:NEWTON} may be set to $1$.
