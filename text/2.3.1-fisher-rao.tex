@@ -12,7 +12,7 @@ space of probability distributions. In our case we will use a non-parametric
 version, slightly different from the original one, defined on the space of
 signed measures. This metric plays a very important role in information
 geometry, and it is the only metric that possesses this property of
-invariance (Cencov [*]).
+invariance \cite{Cencov1982}.
 
 A riemannian metric is an application that assigns an inner product at each
 point of variety on its tangent space that varies smoothly from point to point.
@@ -42,7 +42,7 @@ L[\alpha] = \int_0^1 \langle \langle \dot \alpha(\tau), \dot \alpha(\tau)
 \end{equation}
 
 This will allow us to define the distance between two points of the
-manifold $f_1, f_2 \mathcal{F}$ as the length of the geodesic path, or shortest
+manifold $f_1, f_2 \in \mathcal{F}$ as the length of the geodesic path, or shortest
 path, which connects $f_1$ and $f_2$,
 
 \begin{equation}[]{Length of shortest path}
@@ -74,7 +74,7 @@ Taking advantage of this characterization we will take our functions to the
 SRSF's space to perform our analysis efficiently, and then transform the result
 to the original space, because the SRSF establishes a map up to constant between
 $\mathcal{F}$ and the space of SRSF's with the $\mathbb{L}^2$ metric.
-A consequence of this is that the computation of geodesics shown in
+A consequence is that the computation of geodesics shown in
 \ref{FIG:GEODESIC} becomes in a straight line
 between SRSFs, 
 \begin{equation}[]{Straight line of SRSFs}
