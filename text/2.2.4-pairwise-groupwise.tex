@@ -11,6 +11,11 @@ When a warping $\gamma^*$ fulfills this property, we will say that $f_1$ is
 registered to $f_2 \circ \gamma^*$. In the figure \ref{SBFIG:PAIRWISE1} it is
 shown an example where two functions have been registered using this approach.
 
+\begin{figure}[Pairwise alignment]{FIG:PAIRWISE}{Pairwise alignment}
+	\subfigure[SBFIG:PAIRWISE1]{Alignment of $f_1$ to $f_2$}{\image{7.5cm}{}{pairwise-alignment}} \quad
+	\subfigure[SBFIG:PAIRWISE2]{Warping built by the DPA algorithm}{\image{7.5cm}{}{pairwise-alignment-warping}}
+\end{figure}
+
 To estimate $\gamma^*$, we will explore different paths that the
 reparameterization may take in a discretized grid, trying to minimize the energy
 term. In the Appendix B.2 it is described in detail the algorithm used for this
@@ -18,10 +23,7 @@ task, which is usually referred by several authors as dynamic programing
 algorithm, or simply DPA [REF to DPA], because it makes use of this programming
 technique to search the optimal path.
 
-\begin{figure}[Pairwise alignment]{FIG:PAIRWISE}{Pairwise alignment}
-  \subfigure[SBFIG:PAIRWISE1]{Alignment of $f_1$ to $f_2$}{\image{7.5cm}{}{pairwise-alignment}} \quad
-  \subfigure[SBFIG:PAIRWISE2]{Warping built by the DPA algorithm}{\image{7.5cm}{}{pairwise-alignment-warping}}
-\end{figure}
+
 
 Given a set of functions $\{f_i\}_{i=1}^n \subset \mathcal{F}$, the
 groupwise alignment problem will consist in the search of warping functions

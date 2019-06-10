@@ -1,19 +1,21 @@
 
+\begin{figure}[Penalized elastic registration]{FIG:PENALTY}{Penalized elastic registration with different values of $\lambda$}
+	\subfigure[SBFIG:AMPLITUDE]{Registration of $f_1$ to $f_2$ with a penalty term}{\image{7cm}{}{penalty-elastic}} \quad
+	\subfigure[SBFIG:PHASE]{Warping used in the alignment}{\image{7cm}{}{penalty-elastic-warping}}
+\end{figure}
+
 Sometimes it is necessary to control the amount of elasticity during the
 registration process, for this purpose it is possible to add a penalty term
-$\mathcal{R}(\lambda)$ to the elastic distance.
+$\mathcal{R}(\lambda)$ to the elastic distance \ref{EQ:ELASTIC}.
 Let $q_1, q_2 \in \mathbb{L}^2$ be two SRSFs and $\lambda > 0$, we will define
 the penalized elastic distance as
 
-$$
+\begin{equation}[]{Restricted amplitude distance}
 d_{\lambda}\left(q_{1}, q_{2}\right) \equiv \inf _{\gamma \in \Gamma}\left(
 \| q_{1}-\left(q_{2} \circ \gamma \sqrt{\dot{\gamma}}\right)\left\|^{2}+
 \lambda\right\| \sqrt{\dot{\gamma}}-1 \|^{2} \right)^{(1 / 2)}.
-$$
+\end{equation}
 
-The alignment of two functions with different penalties is shown in the figure \ref{FIG:PENALTY}.
+%The alignment of two functions with different penalties is shown in the figure \ref{FIG:PENALTY}.
 
-\begin{figure}[Penalized elastic registration]{FIG:PENALTY}{Penalized elastic registration}
-  \subfigure[SBFIG:AMPLITUDE]{Registration of $f_1$ to $f_2$ with a penalty term}{\image{7cm}{}{penalty-elastic}} \quad
-  \subfigure[SBFIG:PHASE]{Warping used in the alignment}{\image{7cm}{}{penalty-elastic-warping}}
-\end{figure}
+

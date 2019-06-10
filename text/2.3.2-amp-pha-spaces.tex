@@ -3,6 +3,10 @@ We will formalize the amplitude and phase distance between functions of
 $\mathcal{F}$, which will come in a natural way due to the properties of the
 metric.
 
+\begin{figure}[Rotation in complex plane]{FIG:ROTATION}{Rotation in complex plane}
+	\image{7cm}{}{rotation}
+\end{figure}
+
 Firstly, before we proceed to define the phase and amplitude space, we will see
 an analogy with the rotations on the complex plane, which will be very useful to
 understand the role played by each of the magnitudes in our manifold.
@@ -12,11 +16,6 @@ figure \ref{FIG:ROTATION}, when it is applied a rotation on the plane, their
 distance remains invariant, i.e., it is an action by isometries, as the
 reparameterizations on our manifold.
 
-
-\begin{figure}[Rotation in complex plane]{FIG:ROTATION}{Rotation in complex plane}
-
-\image{7cm}{}{rotation}
-\end{figure}
 
 The variability between two vectors in the plane can be completely specified by
 the angle between them, which will play the role of the phase in our space, and
@@ -45,8 +44,8 @@ $[z] = \{z e^{i \theta} : \theta \in [0, 2\pi]\}$.
 In the case of our manifold, let $q \in \mathbb{L}^2$ be a SRSF. We will define
 its orbit under $\Gamma$ as \\$[q] = \{(q, \gamma) : \gamma \in \Gamma \}$, in
 other words, it is the set of reparameterizations associated to q. In the
-figure \ref{ORBIT1} it is shown some reparameterizations associated  to a function
-of $\mathscr{F}$ and their corresponding SRSF's in \ref{ORBIT2}.
+figure \ref{SBFIG:ORBIT1} it is shown some reparameterizations associated  to a function
+of $\mathscr{F}$ and their corresponding SRSF's in \ref{SBFIG:ORBIT2}.
 
 
 \begin{figure}[Functions in the same orbit]{FIG:ORBIT}{Functions in the same orbit}
@@ -60,11 +59,11 @@ equivalence classes, while the amplitude variation appears across equivalence
 classes, as in the analogy with the complex plane. We will endow the space with
 the elastic metric, defined as
 
-$$
+\begin{equation}[EQ:ELASTIC]{Elastic distance}
 d_{a}\left(\left[q_{1}\right],\left[q_{2}\right]\right)=\inf _{
-\gamma_{1}, \gamma_{2} \in \tilde{\Gamma}}\left(\left\|\left(q_{1},
+\gamma_{1}, \gamma_{2} \in {\Gamma}}\left(\left\|\left(q_{1},
  \gamma_{1}\right)-\left(q_{2}, \gamma_{2}\right)\right\|\right),
-$$
+\end{equation}
 
 To quantify the other source of variability, we will define the phase space,
 which will denoted as
@@ -74,11 +73,11 @@ for which the natural distance will be given by the Fisher-Rao metric.
 Let $\gamma \in \Gamma$ be a warping function, under the Fisher-Rao metric,
 their norm will be 1, thus
 
-$$
+\begin{equation}[]{Norm of warping}
 \| \gamma \|_\Gamma^2 = \| SRSF(\gamma)\|_{\mathbb{L}^2}^2 =  \| \dot \gamma\|_{\mathbb{L}^2}^2 =
 \int_0^1 \sqrt{\dot \gamma (t)} \sqrt{\dot \gamma (t)}dt =
 \int_0^1 \dot \gamma(t)dt = \gamma(1) - \gamma(0) = 1.
-$$
+\end{equation}
 
 The SRSF transform will be an isometry between $\Gamma$ and the unit sphere in
 $\mathbb{L}^2$, also known as Hilbert Sphere
@@ -90,10 +89,10 @@ Let $\gamma_1, \gamma_2$ be in $\Gamma$ and $\psi_1=\sqrt{\dot \gamma_1},
 \psi_2=\sqrt{\dot \gamma_1}$ be their SRSF, their distance in $\Gamma$ will be
 given by
 
-$$
+\begin{equation}[]{Phase distance}
 d_{phase}(\gamma_1, \gamma_2) = d_{\psi}(\psi_1, \psi_2) =
-cos^{-1}(\int_0^1 \psi_1(t) \psi_2(t) dt).
-$$
+\cos^{-1}\left (\int_0^1 \psi_1(t) \psi_2(t) dt\right ).
+\end{equation}
 
 This result is analogous to the rotations in the plane, where the cosine of
 the angle between two unit vectors will be given by the inner product.
@@ -103,16 +102,16 @@ the properties of the Fisher-Rao metric.
 
 Let $f_1, f_2$ be functions in $\mathcal{F}$, their relative phase is defined as
 
-$$
-\left(\gamma_{1}^{*}, \gamma_{2}^{*}\right)=\underset{\gamma_{1}, \gamma_{2} \in \Gamma}{\operatorname{argmin}}\left(\left\|\left(q_{1}, \gamma_{1}\right)-\left(q_{2}, \gamma_{2}\right)\right\|\right) \in \Gamma \times \Gamma.
-$$
+\begin{equation}[EQ:RELATIVEPHASE]{Relative phase}
+\left(\gamma_{1}^{*}, \gamma_{2}^{*}\right)=\underset{\gamma_{1}, \gamma_{2} \in \Gamma}{\operatorname{argmin}}\left\|\left(q_{1}, \gamma_{1}\right)-\left(q_{2}, \gamma_{2}\right)\right\| \in \Gamma \times \Gamma.
+\end{equation}
 
 Which will allow us to calculate the phase variability between them,
 as a generalization of the notion of an angle. The phase distance between these
 functions will be the distance of their relative phase
 $d_{phase} (\gamma_{1}^{*}, \gamma_{2}^{*})$. Alternatively, we can use de properties of
-the metric to define the relative phase using depending on a single warping,
+the metric to define the relative phase depending on a single warping,
 $
-\gamma^{*}=\underset{\gamma \in \Gamma}{\operatorname{argmin}}\left(\left\|\left(q_{1}, \gamma \right)- q_{2}\right\|\right),
+\gamma_{12}^{*}=\underset{\gamma \in \Gamma}{\operatorname{argmin}}\left(\left\|\left(q_{1}, \gamma \right)- q_{2}\right\|\right),
 $
-which is quivalent to set $\gamma_2^*$ to de identity in the previous definition.
+which is quivalent to set $\gamma_2^*$ to de identity in \ref{EQ:RELATIVEPHASE}.

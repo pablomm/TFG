@@ -8,10 +8,10 @@ Let $\{f_i\} \subset \mathscr{F}$ be a dataset of functions to register and
 $q_i$ their corresponding SRSFs. Firstly we will compute their Karcher mean in
 $\mathscr{A}$, defined as
 
-$$
+\begin{equation}[]{Karcher mean on $\mathscr{A}$}
 \left[\mu_{q}\right]=\underset{[q] \in \mathscr{A}}{\operatorname{arginf}}
 \sum_{i=1}^{n} d_{a}\left([q],\left[q_{i}\right]\right)^{2}.
-$$
+\end{equation}
 
 The bracket notation $[\mu_{q}]$ is used to emphasize the fact it is an orbit in
 a quotient space. We will need a criterion to select a particular element of
@@ -34,13 +34,14 @@ appendix B.3. The center of the orbit will be
 $\tilde \mu_q = (\mu_q , {\bar \gamma}^{-1})$.
 
 The mean of the relative phases with respect to $\tilde \mu_q$, will be the
-identity, thus \\
-$
+identity, thus
+
+\begin{equation}[]{Identity mean}
 %\bar {\{  \gamma_i \circ {\bar \gamma}^{-1}  \}} =
 \operatorname{arginf}_{\gamma \in \Gamma}d_{FR}(\gamma_i \circ {\bar \gamma}^{-1}, \gamma) =
 \operatorname{arginf}_{\gamma \in \Gamma}d_{FR}(\gamma_i \circ {\bar \gamma}^{-1} \circ \bar \gamma, \gamma \circ \bar \gamma) =
 \operatorname{arginf}_{\gamma \in \Gamma}d_{FR}(\gamma_i, \gamma \circ \bar \gamma) = \gamma_{id}.
-$
+\end{equation}
 
 Finally, we will construct the template to which the samples will be aligned,
 called elastic mean,
@@ -51,11 +52,11 @@ the figure \ref{FIG:ELASTICREG} may be observed the result of the registration o
 berkeley growth curves of the figure \ref{FIG:BERKELEY}.
 
 \begin{figure}[Elastic registration of the Berkeley velocity curves]{FIG:ELASTICREG}{Elastic registration of the Berkeley velocity curves}
-  \image{9cm}{}{berkeley-registered}
+  \image{8cm}{}{berkeley-registered}
 \end{figure}
 
 An important property of the elastic mean
-$\tilde \mu_f$ is that given a dataset $\{c_i f(\gamma_i(t)) + e_i\}$, where
-$\{\gamma_i\}$ have as mean the identity and $c_i$ and $e_i$ are positive
+$\tilde \mu_f$ is that given a dataset $\{c_i f(\gamma_i(t)) + e_i\}_{i=1}^{n}$, where
+$\{\gamma_i\}_{i=1}^{n}$ have as Karcher mean in $\Gamma$ the identity and $c_i$ and $e_i$ are positive
 constants with mean $1$ and $0$ respectively, then $\tilde \mu_f$ is a
 consistent estimator of $f$ [refff to paper].

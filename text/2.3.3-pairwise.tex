@@ -7,24 +7,27 @@ Given $f_1, f_2 \in \mathscr{F}$, to register $f_1$ to $f_2$ the Fisher-Rao dist
 will be minimized, as energy term, i.e., according to [ref to equation]
 the warping used in the alignment will be
 
-$$
-\gamma^{*}= \operatorname{argmin}_{\gamma \in \Gamma} d_{FR}[f_1 \circ \gamma,
-f_2] = \operatorname{argmin}_{\gamma \in \Gamma} \|
+\begin{equation}[]{Pairwise alignment with F-R metric}
+\gamma^{*}= \operatorname{argmin}_{\gamma \in \Gamma} d_{FR}(f_1 \circ \gamma,
+f_2) = \operatorname{argmin}_{\gamma \in \Gamma} \|
 (q_1, \gamma) - q_2 \|_{\mathbb{L}^2}.
-$$
+\end{equation}
 
 The energy used to align the functions in figure \ref{SBFIG:PAIRWISE1} was
 actually this.
-
 We will have a property of symmetry, since
 $E[f_1, f_2] = E[f_1 \circ \gamma, f_2 \circ \gamma]$, the warping used to
 register $f_1 \circ \gamma$ to $f_2 \circ \gamma$ will be the same as in the
 previous case.
 
 Because of this property, our problem will have inverse consistency, since
-$E[f_1 \circ \gamma, f_2] = \\ E[f_1 \circ \gamma \circ \gamma^{-1}, f_2
-\circ \gamma^{-1}] = E[f_1, f_2 \circ \gamma^{-1}]$, so that the
-warping needed to register $f_2$ to $f_1$  is ${\gamma^*}^{-1}$.
+
+\begin{equation}[]{Inverse consistency}
+E[f_1 \circ \gamma, f_2] = E[f_1 \circ \gamma \circ \gamma^{-1}, f_2
+\circ \gamma^{-1}] = E[f_1, f_2 \circ \gamma^{-1}],
+\end{equation}
+
+so that the warping needed to register $f_2$ to $f_1$  is ${\gamma^*}^{-1}$.
 
 %%, as it is shown in \ref{FIG:INVERSE}.
 %\begin{figure}[Inverse consistency of pairwise alignment]{FIG:INVERSE}{Inverse consistency of pairwise alignment}

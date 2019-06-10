@@ -26,29 +26,29 @@ Fisher-Rao metric.
 Let $f \in \mathcal{F}$  and $v_{1}, v_{2} \in T_{f}(\mathcal{F})$,
 the Fisher-Rao metric is defined as
 
-$$
+\begin{equation}[]{Fisher-Rao metric}
 \left\langle\left\langle v_{1}, v_{2}\right\rangle\right\rangle_{f}=
 \frac{1}{4} \int_{0}^{1} \dot{v}_{1}(t) \dot{v}_{2}(t) \frac{1}{|\dot{f}(t)|}dt,
-$$
+\end{equation}
 where $\dot v$ denotes the derivative.
 
 Using this local notion of inner product, we will be able to calculate the
 length of a differentiable path in our manifold
 $\alpha(\tau) \subset \mathcal{F}$ integrating through it, i.e.,
 
-$$
+\begin{equation}[]{Length of path}
 L[\alpha] = \int_0^1 \langle \langle \dot \alpha(\tau), \dot \alpha(\tau)
 \rangle \rangle_{\alpha(\tau)} d\tau.
-$$
+\end{equation}
 
 This will allow us to define the distance between two points of the
 manifold $f_1, f_2 \mathcal{F}$ as the length of the geodesic path, or shortest
 path, which connects $f_1$ and $f_2$,
 
-$$
+\begin{equation}[]{Length of shortest path}
 d_{F R}\left(f_{1}, f_{2}\right)=\inf _{\alpha :[0,1]
 \rightarrow \mathcal{F}, \alpha(0)=f_{1}, \alpha(1)=f_{2}} L[\alpha] \, .
-$$
+\end{equation}
 
 Finding the geodesic path directly is computationally unapproachable,
 for this reason we will introduce the \textbf{square root slope function} (SRSF)
@@ -68,7 +68,7 @@ Under this transformation, the Fisher-Rao metric becomes the usual metric
 in $\mathbb{L}^2$, so that the distance between two functions will be
 calculated using the distance $\mathbb{L}^2$ of their corresponding
 SRSF's, i.e.,  $d_{FR}(f_1, f_2) = \| q_1 - q_2 \|_{\mathbb{L}^2}$. A proof of
-this result is included in Appendix \ref{APAPAP}.
+this result is included in Appendix \ref{SEC:MAPPING}.
 
 Taking advantage of this characterization we will take our functions to the
 SRSF's space to perform our analysis efficiently, and then transform the result
@@ -77,18 +77,19 @@ $\mathcal{F}$ and the space of SRSF's with the $\mathbb{L}^2$ metric.
 A consequence of this is that the computation of geodesics shown in
 \ref{FIG:GEODESIC} becomes in a straight line
 between SRSFs, 
+\begin{equation}[]{Straight line of SRSFs}
+\alpha(\tau) = (1 - \tau)q_1 + \tau q_2 \quad 0 \le \tau \le 1.
+\end{equation}
 
-$$\alpha(\tau) = (1 - \tau)q_1 + \tau q_2 \quad 0 \le \tau \le 1.$$
-
-Given $\gamma \in \Gamma$. When it is calculated the SRSF of $f \circ \gamma$,
+Given $\gamma \in \Gamma$, when it is calculated the SRSF of $f \circ \gamma$,
 due to the chain rule, we can observe that
 $SRSF\{f \circ \gamma\} = \operatorname{sgn}(\dot{f} \circ \gamma) \sqrt{\dot f \circ \gamma}
 \sqrt{\dot \gamma} = (q \circ \gamma) \sqrt{\dot \gamma}$. To simplify the
 notation we  will denote the SRSF of this composition as $(q, \gamma)$.
-Using this fact, we can proof that the action of $\Gamma on \mathscr{F}$ is an
+Using this fact, we can proof that the action of $\Gamma$ on $\mathscr{F}$ is an
 action by isometries, i.e, given $f  \in \mathscr{F}$ and $\gamma \in \Gamma$
 the composition $f \circ \gamma$ preserves the metric.
-A proof of this result is given in the appendix \ref{adkmadskm}.
+A proof of this result is given in the appendix \ref{SEC:ACTION}.
 Figure \ref{FIG:ACTIONS} shows a diagram with the action of the composition
 in the different spaces.
 

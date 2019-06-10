@@ -4,9 +4,9 @@ $\mathcal{X}_i$ are associated to the labels $Y_i$ corresponding to their class.
 Given a datum $x$, we will predict a new label using the majority class among
 its neighbors, so that the predicted class will be
 
-$$
+\begin{equation}{Classification prediction}
 \hat Y =\underset{j}{\operatorname{argmax}} \sum_{\mathcal{X}_i \in k(x)} \mathbbm{1}_{\{ Y_i = j\}}.
-$$
+\end{equation}
 
 It is possible to make a weighting vote, so that the closest neighbors will have
 a greater weight, for example, using $w_i=1/d(\mathcal{X}_i, x)$, so that the
