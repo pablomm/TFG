@@ -8,6 +8,13 @@ $\{f_i\}_{i=1}^{N} \subset \mathbb{L}^2$ is a set of functional observations,
 their mean $\bar f(t) = \frac{1}{N}\sum_{i=1}^{N} f_i(t)$ will minimize
 $\sum_{i=1}^{N}\|f_i - \bar f\|_{\mathbb{L}^2}$.
 
+\begin{figure}[Karcher mean of dataset]{FIG:KARCHER}{Karcher mean of dataset}
+	\subfigure[SBFIG:KARCHER1]{Dataset of unimodal samples}{\image{7cm}{}{unimodal-dataset}} \quad
+	\subfigure[SBFIG:KARCHER2]{Usual mean and Karcher mean on $\mathscr{A}$}{\image{7cm}{}{means}} \\
+	\subfigure[SBFIG:RANK1]{Ranked by elastic distance}{\image{7cm}{}{dataset-by-amplitude}} \quad
+	\subfigure[SBFIG:RANK2]{Ranked by phase distance}{\image{7cm}{}{dataset-by-phase}}
+\end{figure}
+
 We are interested in extend this idea to general metrics spaces.
 Let $(X, d)$ be a metric space and $\{x_i\}_{i=1}^{N}$ random points in $X$.
 The Fréchet variance of a point $p \in X$ as $\Psi(p)=\sum_{i=1}^{N} d^{2}\left(p, x_{i}\right)$.
@@ -29,12 +36,7 @@ For instance, the dataset shown in \ref{SBFIG:KARCHER1} contains gaussian-like
 samples, however the usual mean of figure \ref{SBFIG:KARCHER2} is not able to reflect
 this shape, unlike the Karcher mean in $\mathscr{A}$.
 
-\begin{figure}[Karcher mean of dataset]{FIG:KARCHER}{Karcher mean of dataset}
-  \subfigure[SBFIG:KARCHER1]{Dataset of unimodal samples}{\image{7cm}{}{unimodal-dataset}} \quad
-  \subfigure[SBFIG:KARCHER2]{Usual mean and Karcher mean on $\mathscr{A}$}{\image{7cm}{}{means}} \\
-  \subfigure[SBFIG:RANK1]{Ranked by elastic distance}{\image{7cm}{}{dataset-by-amplitude}} \quad
-  \subfigure[SBFIG:RANK2]{Ranked by phase distance}{\image{7cm}{}{dataset-by-phase}}
-\end{figure}
+
 
 As an example of the behavior of these means with different metrics, we may
 measure the centrality of an observation in a dataset using its distance to the

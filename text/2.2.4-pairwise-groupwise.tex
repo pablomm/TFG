@@ -3,7 +3,7 @@ We will define the pairwise alignment problem [REF TO Srivastava] to deal with
 the registration problem of two functions using a global criterion.
 
 Let $f_1, f_2 \in \mathcal{F}$ be functional observations of a general space
-\mathcal{F} and $E: \mathcal{F} \times \mathcal{F} \rightarrow \mathbb{R}^+$ an energy
+$\mathcal{F}$ and $E: \mathcal{F} \times \mathcal{F} \rightarrow \mathbb{R}^+$ an energy
 functional. The alignment problem may be understood as the search of a warping
 function $\gamma^*$ which minimizes the energy between the two functions, i.e.,
 $\gamma^* = \operatorname{argmin}_{\gamma \in \Gamma} E[f_1, f_2 \circ \gamma]$.
@@ -19,8 +19,8 @@ algorithm, or simply DPA [REF to DPA], because it makes use of this programming
 technique to search the optimal path.
 
 \begin{figure}[Pairwise alignment]{FIG:PAIRWISE}{Pairwise alignment}
-  \subfigure[SBFIG:PAIRWISE1]{Alignment of $f_1$ to $f_2$}{\image{7cm}{}{pairwise-alignment}} \quad
-  \subfigure[SBFIG:PAIRWISE2]{Warping built by the DPA algorithm}{\image{7cm}{}{pairwise-alignment-warping}}
+  \subfigure[SBFIG:PAIRWISE1]{Alignment of $f_1$ to $f_2$}{\image{7.5cm}{}{pairwise-alignment}} \quad
+  \subfigure[SBFIG:PAIRWISE2]{Warping built by the DPA algorithm}{\image{7.5cm}{}{pairwise-alignment-warping}}
 \end{figure}
 
 Given a set of functions $\{f_i\}_{i=1}^n \subset \mathcal{F}$, the
@@ -31,7 +31,7 @@ called template, to which all the curves will be aligned. For instance,
 the cross-sectional mean of the functions may be used as target.
 
 A possible choice for the energy term would be to take
-$E[f,g]= |\f - g\|_{mathbb{L}^2}^2$, as in \ref{LSQ}, but
+$E[f,g]= \|f - g\|_{\mathbb{L}^2}^2$, as in \ref{LSQ}, but
 this criterion is not used in practice because three
 problems will arise that will not make it adequate: the pinching effect, the
 lack of symmetry and the inverse inconsistency [REF MAROON].

@@ -15,25 +15,7 @@ reparameterizations on our manifold.
 
 \begin{figure}[Rotation in complex plane]{FIG:ROTATION}{Rotation in complex plane}
 
-%\begin{tikzpicture}
-%  %% Axis
-%  \draw[<->] (-2.5,0)--(2.5,0);%% node[above]{$\operatorname{Re}\{z\}$};
-%  \draw[<->] (0,-0.5)--(0,2.5);%% node[above]{$\operatorname{Im}\{z\}$};
-%
-%  \draw[blue, -stealth, dashed](0.3, 0.5196) arc(60:180:0.6);
-%  \draw[orange, -stealth, dashed](0.433, 0.25) arc(30:150:0.5);
-%
-%  %% Original vectors
-%  \draw[line width=1.5pt,blue,-stealth](0,0)--(1, 1.732) node[anchor=  east]{${z_1}$};
-%  \draw[line width=1.5pt,orange,-stealth](0,0)--(1.2124, 0.7) node[anchor= north west]{${z_2}$};
-%  \draw[line width=1pt,red, dashed, shorten <=2.5](1, 1.732)--(1.2124, 0.7);% node[anchor= south west]{${| z_1 - z_2| }$};
-%
-%  %% Rotated vectors
-%  \draw[line width=1.5pt,blue,-stealth](0,0)--(-2, 0) node[anchor= north west]{${z_1 e^{i\theta}}$};
-%  \draw[line width=1.5pt,orange,-stealth](0,0)--(-1.2124, 0.7) node[anchor= south west]{${z_2 e^{i\theta}}$};
-%  \draw[line width=1pt,red, dashed, shorten <=2.5](-2, 0)--(-1.2124, 0.7);% node[anchor= south east]{${| z_1e^{i\theta} - z_2e^{i\theta}| }$};
-%
-%\end{tikzpicture}
+\image{7cm}{}{rotation}
 \end{figure}
 
 The variability between two vectors in the plane can be completely specified by
@@ -45,45 +27,10 @@ between the vector once aligned.
 
 \subfigure[SBFIG:COMPLEX2]{Angle between vectors}{
 
-%\begin{tikzpicture}
-%
-%%% Axis
-%\draw[<->] (-2.5,0)--(2.5,0) ; %%node[right]{$\operatorname{Re}\{z\}$};
-%\draw[<->] (0,-2.5)--(0,2.5) ; %%node[above]{$\operatorname{Im}\{z\}$};
-%
-%% Unit circle
-% \draw(1, 1.732) arc(60:390:2);
-% \draw[red, thick, dashed, shorten <=1.5] (1.732, 1) arc(30:60:2);
-% \node[text width=0.2] at (1.7,-1.7) {$\mathbb{T}$};
-%
-%%% Original vectors
-%\draw[line width=1.5pt,blue,-stealth](0,0)--(1, 1.732) node[anchor=  south west]{${e^{i \theta_1}}$};
-%\draw[line width=1.5pt,orange,-stealth](0,0)--(1.732, 1) node[anchor=  west]{${e^{i \theta_2}}$};
-%\end{tikzpicture}
+\image{6cm}{}{angle}
 } \quad
 \subfigure[SBFIG:COMPLEX2]{Distance in $\mathbb{C}/\mathbb{T}$}{
-
-%\begin{tikzpicture}
-%
-%%% Fake axes to have the same margins
-%\draw[white, opacity=0] (-2.5,0)--(2.5,0) ; %%node[right]{$\operatorname{Re}\{z\}$};
-%\draw[white, opacity=0] (0,-2.5)--(0,2.5) ; %%node[above]{$\operatorname{Im}\{z\}$};
-%
-%%% Axis
-%\draw[|->] (0,0)--(3,0) node[right]{$\mathbb{C}/\mathbb{T}$};
-%
-%
-%%%\draw[orange] (0, 0) circle (1.4);
-%%%\draw[blue] (0, 0) circle (2);
-%
-% \draw[orange, -stealth] (0.9899, 0.9899) arc(45:405:1.4);
-% \draw[blue, -stealth] (1.4142, 1.4142) arc(45:405:2);
-%
-%%% Rotated vectors
-%\draw[line width=1.5pt,blue,-stealth](0,0)--(2, 0) node[anchor= south west]{${[z_1]}$};
-%\draw[line width=1.5pt,orange,-stealth](0,0)--(1.4, 0) node[anchor= south east]{${[z_2]}$};
-%\draw[line width=1pt,red, dashed, shorten <=1](0.9899, 0.9899)--(1.4142, 1.4142);% node[anchor= south west]{$|[z_1] - [z_2]|$};
-%\end{tikzpicture}
+\image{6cm}{}{module}
 }
 
 \end{figure}
@@ -121,7 +68,7 @@ $$
 
 To quantify the other source of variability, we will define the phase space,
 which will denoted as
-$\Gamma = \{\gamma :[0,1] \rightarrow[0,1]  : \gamma \, is \, a \, boundary-preserving \, diffeomorphism\}$,
+$\Gamma = \{\gamma :[0,1] \rightarrow[0,1]  : \gamma \text{is a boundary-preserving diffeomorphism}\}$,
 for which the natural distance will be given by the Fisher-Rao metric.
 
 Let $\gamma \in \Gamma$ be a warping function, under the Fisher-Rao metric,

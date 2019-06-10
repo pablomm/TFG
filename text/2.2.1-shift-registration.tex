@@ -15,10 +15,7 @@ where the shift parameter $\delta_i$ is chosen in order to align the features of
 the curves. In the figure \ref{SBFIG:SHIFT2} it is shown the result of apply
 this type of transformation to the set of sinusoidal waves.
 
-\begin{figure}[Shift registration of a dataset]{FIG:SHIFT}{Shift registration of a dataset}
-  \subfigure[SBFIG:SHIFT1]{Unregistered curves $x(t)$}{\image{7cm}{}{sines-waves}} \quad
-  \subfigure[SBFIG:SHIFT2]{Registered curves $x^*(t)$}{\image{7cm}{}{sines-waves-shifted}}
-\end{figure}
+
 
 A possible solution for the calculation of shifts $\delta_i$, is using a least
 square criterion, defined as
@@ -32,3 +29,8 @@ minimize $\mathbb{L}^2$ distance to the cross-sectional mean. For this purpose,
 we will use the derivatives of the functions $x_i$, using a variation of the
 Newton-Rhapson method. A description of the algorithm used to calculate these
 values is given in the Appendix B.1 [***********].
+
+\begin{figure}[Shift registration of a dataset]{FIG:SHIFT}{Shift registration of a dataset}
+	\subfigure[SBFIG:SHIFT1]{Unregistered curves $x(t)$}{\image{7.5cm}{}{sine-waves}} \quad
+	\subfigure[SBFIG:SHIFT2]{Registered curves $x^*(t)$}{\image{7.5cm}{}{sine-waves-shifted}}
+\end{figure}
