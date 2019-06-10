@@ -1,0 +1,53 @@
+
+
+For the calculation of the values $\delta_i$ necessary for the registration of a
+set of functional samples $\{x_i\}_{i=1}^{n}$, according to ref{},
+we will use a variation of the Newton-Rhapson's root-finding algorithm, applied
+to the derivative of REGSSE (ref{}). This procedure is explained in more detail
+in Ramsay and Silverman (2005) \ref{Ramsay2005}.
+
+For this computation it will be necessary to evaluate derivatives of
+$x_i$, so it will be crucial a previous smoothing step of the samples.
+
+Derivatives of REGGSE are given by:
+
+\begin{equation}
+\frac{\partial}{\partial \delta_i} \text{REGSSE} = 2 \int_{\mathcal{T}}
+\left [ x_i(t + \delta_i) - \hat \mu(t) \right ] Dx_i(t) dt,
+\end{equation}
+
+\begin{equation}[EQ:SECOND]{}
+\frac{\partial^2}{\partial \delta^2_i} \text{REGSSE} = 2
+\int_{\mathcal{T}} \left [ x_i(t + \delta_i) - \hat \mu(t) \right ]
+D^2x_i(t) dt + 2 \int_{\mathcal{T}} \left [  Dx_i(t)^2 \right ]  dt.
+\end{equation}
+
+In practice the second term of $\frac{partial^2}{partial \delta^2_i}$
+(\ref{EQ:SECOND}), because when the misalignment of the samples is large it
+can affect the convergence of the algorithm, and vanishes for the values that
+minimize the criterion. Therefore the following approximation is used:
+
+\begin{equation}
+\frac{\partial^2}{\partial \delta^2_i} \text{REGSSE} \approx  
+2 \int_{\mathcal{T}} \left [  Dx_i(t)^2 \right ]  dt.
+\end{equation}
+
+The algorithm for optimization is as follows:
+
+Step 0:
+
+Initialize  \delta_i ^{(0)}
+
+Step \nu: for \nu=1,2,3,…
+
+\hat \mu   <- \frac{1}{N} \sum x_i(t + \delta_i^{(\nu -1)})
+\delta_i ^{(\nu)} = \delta_i ^{(\nu - 1)} - \alpha \frac{\frac{\partial}{\partial \delta_i}  REGSSE}{\frac{\partial^2}{\partial \delta^2_i} REGSSE}
+
+
+The initilization of $\delta_i ^{(0)}$ may be set to minimize some feature, or
+simply set $delta_i ^{(0)}$ to $0$.
+
+Could be used as stop criterion a maximun value of iterations along with a
+tolerance $| \delta_i ^{(\nu)} - \delta_i ^{(\nu-1)} | < \epsilon$.
+Generally the convergence is fast, obtaining good alignments with one or two
+iteration with a reasonable estimation of the initial values $\delta_i ^{(0)}$.
