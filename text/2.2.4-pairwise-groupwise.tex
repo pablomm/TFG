@@ -1,5 +1,5 @@
 
-We will define the pairwise alignment problem [REF TO Srivastava] to deal with
+We will define the pairwise alignment problem \cite{Srivastava2016} to deal with
 the registration problem of two functions using a global criterion.
 
 Let $f_1, f_2 \in \mathcal{F}$ be functional observations of a general space
@@ -18,7 +18,7 @@ shown an example where two functions have been registered using this approach.
 
 To estimate $\gamma^*$, we will explore different paths that the
 reparameterization may take in a discretized grid, trying to minimize the energy
-term. In the Appendix B.2 it is described in detail the algorithm used for this
+term. In the appendix \ref{SEC:DPA}  it is described in detail the algorithm used for this
 task, which is usually referred by several authors as dynamic programing
 algorithm, or simply DPA [REF to DPA], because it makes use of this programming
 technique to search the optimal path.
@@ -33,7 +33,7 @@ called template, to which all the curves will be aligned. For instance,
 the cross-sectional mean of the functions may be used as target.
 
 A possible choice for the energy term would be to take
-$E[f,g]= \|f - g\|_{\mathbb{L}^2}^2$, as in \ref{LSQ}, but
+$E[f,g]= \|f - g\|_{\mathbb{L}^2}^2$, but
 this criterion is not used in practice because three
 problems will arise that will not make it adequate: the pinching effect, the
-lack of symmetry and the inverse inconsistency [REF MAROON].
+lack of symmetry and the inverse inconsistency \cite{Marron2015}.
