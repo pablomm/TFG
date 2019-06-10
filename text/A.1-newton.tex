@@ -3,12 +3,11 @@
 For the calculation of the values $\delta_i$ necessary for the registration of a
 set of functional samples $\{x_i\}_{i=1}^{n}$, according to ref{},
 we will use a variation of the Newton-Rhapson's root-finding algorithm, applied
-to the derivative of REGSSE (ref{}). This procedure is explained in more detail
-in Ramsay and Silverman (2005) \ref{Ramsay2005}.
+to the derivative of REGSSE (\ref{EQ:REGSSE}). This procedure is explained in more detail
+in Ramsay and Silverman (2005) \cite{Ramsay2005}.
 
 For this computation it will be necessary to evaluate derivatives of
 $x_i$, so it will be crucial a previous smoothing step of the samples.
-
 Derivatives of REGGSE are given by:
 
 \begin{equation}[EQ:FIRST]{First derivative of REGSSE}
