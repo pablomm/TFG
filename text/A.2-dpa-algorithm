@@ -1,0 +1,28 @@
+
+
+In order to find the optimal reparameterization between two functions,
+according to \ref{} we will use a dynamic programming algorithm, see
+\cite[Srivastava2016] for more details.
+
+Para el computo de $\gamma$ es una difeomorfismo en $[0, 1] \rightarrow [0, 1]$,
+por tanto lo podemos entender como un camino estrictamente creciente en el
+rectanculo $[0, 1] \times [0, 1]$, el cual aproximaderos por una malla
+discreta de valores $G_N \times G_N$ con $G_N = \{ (i/N)\}_{i=0}^N$.
+Con esta aproximación estaremos aproximando $\gamma$ como una función lineal a
+trozos.
+
+En la práctica no es necesario explorar todos los valores, nos podemos limitar a
+una partición. Por ejemplo en la figura \ref{FIG:GRID} se muestran los valores
+que puede tomar un warping a partir de cierto punto.
+
+
+
+
+
+
+
+
+
+
+We need to find a warping function $\gamma$ which gives
+a path in
