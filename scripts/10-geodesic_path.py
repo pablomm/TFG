@@ -23,8 +23,8 @@ v = [.25, .5, .75]
 color = cmap(v)
 
 plt.figure("srsf-geodesic")
-q.plot(label="$q_1$")
-q2.plot(label="$q_2$")
+q.plot(label="$q_1$", linewidth=2)
+q2.plot(label="$q_2$", linewidth=2)
 
 for m, c in zip(v, color):
     y = (1 - m)*q + m*q2
@@ -33,8 +33,8 @@ plt.legend()
 plt.tight_layout()
 
 plt.figure("geodesic")
-fd.plot(label="$f_1$")
-fd2.plot(label="$f_2$")
+fd.plot(label="$f_1$", linewidth=2)
+fd2.plot(label="$f_2$", linewidth=2)
 
 for m, c in zip(v, color):
     y = (1 - m)*q + m*q2
