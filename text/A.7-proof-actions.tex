@@ -1,11 +1,11 @@
 
 
-In this section two fundamental results are proved in the theory of
-chapter \ref{SEC:ELASTIC}. These proofs have been extracted from
+In this section two fundamental results are proved, referenced in the section
+ \ref{SEC:ELASTIC}. These proofs have been extracted from
  \cite{Srivastava2016} and \cite{Srivastava2011}
 
-\textbf{Lemma}: Under the SRVF representation, the Fisher-Rao Riemannian metric
-becomes the standard metric.
+\textbf{Lemma 1}: \textit{Under the SRVF representation, the Fisher-Rao Riemannian metric
+becomes the standard metric}.
 
 We can decompose the SRSF mapping into two steps:
 $f(t) \rightarrow \dot f(t) \rightarrow q(t)=sign(\dot f) \sqrt{\dot f}=Q(\dot f)$.
@@ -13,34 +13,38 @@ $f(t) \rightarrow \dot f(t) \rightarrow q(t)=sign(\dot f) \sqrt{\dot f}=Q(\dot f
 For any $v \in T_f(\mathcal{F})$, the differential of this mapping is
 $v(t) \rightarrow \dot v(t) \rightarrow w(t) = Q_{*, f(t)}(\dot v(t))$.
 
-To evaluate the expression for w, we need the expression for $Q_{∗}$.
+To evaluate the expression for $w$, we need the expression for $Q_{*}$.
 In case $x > 0$, we have $Q(x) = \sqrt{x}$ and its directional derivative in the
-direction of $y \in \mathbb{R}$ is y/(2\sqrt{x}).
-In case $x <0$, we have $Q(x) = − \sqrt{−x}$ and its directional derivative is
-$y/(2\sqrt{−x})$. Combining the two, the directional
-derivative of $Q$ is $Q_{∗,x(y)} = $y/(2 \sqrt{|x|})$.
+direction of $y \in \mathbb{R}$ is $y/(2\sqrt{x})$.
+In case $x <0$, we have $Q(x) = - \sqrt{-x}$ and its directional derivative is
+$y/(2\sqrt{-x})$. Combining the two, the directional
+derivative of $Q$ is $Q_{*,x(y)} = y/(2 \sqrt{|x|})$.
 
 Let $v_1, v_2 \in T_f(\mathcal{F})$ be two vectors in the tangent space, and their
 mappings as $w_{i}(t) = \dot{v}_{i}(t) /(2 \sqrt{|\dot{f}(t)| )}$
 
-Taking the \mathbb{L}^2 inner-product between the resulting tangent vectors, we get:
+Taking the $\mathbb{L}^2$ inner-product between the resulting tangent vectors, we get:
 
 $$
 \left\langle w_{1}(t), w_{2}(t)\right\rangle=\int_{0}^{1} w_{1}(t) w_{2}(t) d t=\frac{1}{4} \int_{0}^{1} \dot{v}_{1}(t) \dot{v}_{2}(t) \frac{1}{|f(t)|} d t
 $$
 
 
-The RHS is compared with Eqn. \ref{EQ:FRAO} to complete the proof.
+The RHS is compared with Eqn.\ref{EQ:FRAO} to complete the proof.
 
 
-\textbf{Lemma}: For any two SRVFs $q1, q2 \in \mathbb{L}^2$ and $\gamma \in
-\Gamma$, we have that $\|(q_1, \gamma) - (q_2, \gamma)\| = \| q_1 - q_2\|$
+\textbf{Lemma 2}: \textit{For any two SRVFs $q1, q2 \in \mathbb{L}^2$ and $\gamma \in
+\Gamma$, we have that $\|(q_1, \gamma) - (q_2, \gamma)\| = \| q_1 - q_2\|$.}
 
 Let $\gamma \in \Gamma$ be and arbitrary warping and $q1, q2 \in \mathbb{L}^2$,
 
 $$
 \left\|\left(q_{1}, \gamma\right)-\left(q_{2}, \gamma\right)\right\|^{2}=
 \int_{0}^{1}\left(q_{1}(\gamma(t)) \sqrt{\dot{\gamma}(t)}-q_{2}(\gamma(t))
-\sqrt{\dot{\gamma}(t)}\right)^{2} d t=\int_{0}^{1}\left(q_{1}(\gamma(t))-q_{2}
+\sqrt{\dot{\gamma}(t)}\right)^{2} d t=
+$$
+
+$$
+\int_{0}^{1}\left(q_{1}(\gamma(t))-q_{2}
 (\gamma(t))\right)^{2} \dot{\gamma}(t) d t=\left\|q_{1}-q_{2}\right\|^{2} . \square
 $$
