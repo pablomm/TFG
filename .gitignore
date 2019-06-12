@@ -22,3 +22,4 @@ tfg-pablo-marcos.bbl
 tfg-pablo-marcos.blg
 tfg-pablo-marcos.run.xml
 !figures/*.pdf
+!notebooks-pdf/*.pdf
