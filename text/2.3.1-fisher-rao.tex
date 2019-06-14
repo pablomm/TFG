@@ -1,27 +1,43 @@
 As introduced in section \ref{SEC:L2PAIRWISE}, the use of the metric $\mathbb{L}^2$
-for the pairwise alignment of functions leads to a series of issues, which make
-its use unsuitable for this problem. This is why we will use differential
+for the pairwise alignment of functions leads to a series of difficulties, which make
+it unsuitable for this problem. This is why we will use differential
 geometry techniques to find a suitable metric. In particular, given two
-functions $f_1$, $f_2$ and $\gamma \in \Gamma$, we will look for a metric that
+functions $f_1$, $f_2$ and $\gamma \in \Gamma$, we look for a metric that
 remains invariant to warpings in the domain, i. e.,
 $d(f_1, f_2) = d(f_1 \circ \gamma, f_2 \circ \gamma)$.
 
-For this purpose we will use the Fisher-Rao metric. This riemannian metric was
-introduced in 1945 by C. R. Fisher [Ref to fisher paper] in a version on the
+For this purpose we will use the Fisher-Rao metric. This Riemannian metric was
+introduced in 1945 by C. R. Fisher [??] in a version on the
 space of probability distributions. In our case we will use a non-parametric
 version, slightly different from the original one, defined on the space of
 signed measures. This metric plays a very important role in information
 geometry, and it is the only metric that possesses this property of
-invariance \cite{Cencov1982}.
+invariance to warpings in the domain\cite{Cencov1982}.
 
-A riemannian metric is an application that assigns an inner product at each
+A Riemannian metric is an application that assigns an inner product at each
 point of variety on its tangent space that varies smoothly from point to point.
 This will give us local notions of angles, length of curves or volumes.
 
-In our case our manifold will be formed by the set of absolutely continuous
+The tangent space of a manifold facilitates the generalization of
+vectorsto general manifolds, since one
+cannot simply subtract two points to obtain a vector that gives the displacement
+of the one point from the other. The tangent space of a point $x$ in a general
+manifold $M$, denoted as $T_xM$, is made up of the velocities at $x$ of all the
+paths of the variety passing through the point. For example, in the Figure
+\ref{FIG:TANGENT} is shown a manifold $M$ in $\mathbb{R}^3$. This velocities of
+the path are tangent vectors to the curve. In this case the tangent space $T_xM$
+made up of all these vectors is a plane.
+
+\begin{figure}[Tangent space]{FIG:TANGENT}{Tangent space}
+  \includegraphics[width=7.5cm]{tangent-space}
+\end{figure}
+
+In our case the manifold will be formed by the set of absolutely continuous
 functions $\mathcal{F}$, that is, those functions whose derivative exists a.e.
-and belongs to $\mathbb{L}^2$. We will endow $\mathcal{F}$ with the
-Fisher-Rao metric.
+and belongs to the space of square integrable functions $\mathbb{L}^2$. An
+the tangent space of the points of $\mathcal{F}$ may be understood as smooth
+deformations of the functions.
+We will endow $\mathcal{F}$ with the Fisher-Rao metric.
 
 Let $f \in \mathcal{F}$  and $v_{1}, v_{2} \in T_{f}(\mathcal{F})$,
 the Fisher-Rao metric is defined as
@@ -30,18 +46,18 @@ the Fisher-Rao metric is defined as
 \left\langle\left\langle v_{1}, v_{2}\right\rangle\right\rangle_{f}=
 \frac{1}{4} \int_{0}^{1} \dot{v}_{1}(t) \dot{v}_{2}(t) \frac{1}{|\dot{f}(t)|}dt,
 \end{equation}
-where $\dot v$ denotes the derivative.
+where $\dot v$ denotes the derivative of $v$.
 
 Using this local notion of inner product, we will be able to calculate the
-length of a differentiable path in our manifold
-$\alpha(\tau) \subset \mathcal{F}$ integrating through it, i.e.,
+length of $\alpha(\tau) \subset \mathcal{F}$, a differentiable path in our
+manifold as
 
 \begin{equation}[]{Length of path}
 L[\alpha] = \int_0^1 \langle \langle \dot \alpha(\tau), \dot \alpha(\tau)
 \rangle \rangle_{\alpha(\tau)} d\tau.
 \end{equation}
 
-This will allow us to define the distance between two points of the
+This allows us to define the distance between two points of the
 manifold $f_1, f_2 \in \mathcal{F}$ as the length of the geodesic path, or shortest
 path, which connects $f_1$ and $f_2$,
 
@@ -50,9 +66,10 @@ d_{F R}\left(f_{1}, f_{2}\right)=\inf _{\alpha :[0,1]
 \rightarrow \mathcal{F}, \alpha(0)=f_{1}, \alpha(1)=f_{2}} L[\alpha] \, .
 \end{equation}
 
-Finding the geodesic path directly is computationally unapproachable,
-for this reason we will introduce the \textbf{square root slope function} (SRSF)
-transform, which will greatly simplify this computation.
+This path is the shortest smooth deformation between $f_1$ and $f_2$.
+Finding this geodesic path directly is computationally unapproachable,
+for this reason we will introduce the \textit{square root slope function} (SRSF)
+transform, which simplifies this computation.
 
 \begin{figure}[Geodesic path in $\mathcal{F}$]{FIG:GEODESIC}{Geodesic path in $\mathcal{F}$ and the corresponding SRSF's}
   \subfigure[SBFIG:GEODESIC1]{Some steps of the geodesic path between $f_1$ and $f_2$}{\includegraphics[width=7.5cm]{geodesic}} \quad
@@ -60,7 +77,7 @@ transform, which will greatly simplify this computation.
 \end{figure}
 
 Given $f \in \mathcal{F}$, its SRSF is defined as
-$SRSF\{f\} = \operatorname{sgn}{(\dot f)} \sqrt{\dot f}$. To simplify notation, in the
+$SRSF\{f\} = \operatorname{sgn}{(\dot f)} \sqrt{|\dot f|}$. To simplify notation, in the
 subsequent sections, we will denote the SRSF of a function
 $f_i \in \mathcal{F}$ as $q_i$.
 
@@ -71,8 +88,8 @@ SRSF's, i.e.,  $d_{FR}(f_1, f_2) = \| q_1 - q_2 \|_{\mathbb{L}^2}$. A proof of
 this result is included in appendix \ref{SEC:ACTION}.
 
 Taking advantage of this characterization we will take our functions to the
-SRSF's space to perform our analysis efficiently, and then transform the result
-to the original space, because the SRSF establishes a map up to constant between
+SRSF's space to perform the analysis efficiently, and then transform the result
+to the original space. This can be done because the SRSF defines a map up to constant between
 $\mathcal{F}$ and the space of SRSF's with the $\mathbb{L}^2$ metric.
 A consequence is that the computation of geodesics shown in
 \ref{FIG:GEODESIC} becomes in a straight line
@@ -81,11 +98,15 @@ between SRSFs,
 \alpha(\tau) = (1 - \tau)q_1 + \tau q_2 \quad 0 \le \tau \le 1.
 \end{equation}
 
-Given $\gamma \in \Gamma$, when it is calculated the SRSF of $f \circ \gamma$,
-due to the chain rule, we can observe that
-$SRSF\{f \circ \gamma\} = \operatorname{sgn}(\dot{f} \circ \gamma) \sqrt{\dot f \circ \gamma}
-\sqrt{\dot \gamma} = (q \circ \gamma) \sqrt{\dot \gamma}$. To simplify the
-notation we  will denote the SRSF of this composition as $(q, \gamma)$.
+Given $\gamma \in \Gamma$, the SRSF of $f \circ \gamma$ is
+
+\begin{equation}[]{SRSF of composition}
+SRSF\{f \circ \gamma\} = \operatorname{sgn}(\dot{f} \circ \gamma) \sqrt{|\dot f \circ \gamma|}
+\sqrt{\dot \gamma} = (q \circ \gamma) \sqrt{\dot \gamma}.
+\end{equation}
+
+To simplify the
+notation the SRSF of this composition is denoted by $(q, \gamma)$.
 Using this fact, we can proof that the action of $\Gamma$ on $\mathscr{F}$ is an
 action by isometries, i.e, given $f  \in \mathscr{F}$ and $\gamma \in \Gamma$
 the composition $f \circ \gamma$ preserves the metric.

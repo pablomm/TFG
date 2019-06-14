@@ -1,23 +1,21 @@
 
-We will formalize the amplitude and phase distance between functions of
-$\mathcal{F}$, which will come in a natural way due to the properties of the
-metric.
+Due to the properties of the FR metric, we can formally decompose the distance
+between two functions of $\mathcal{F}$ into the part due to phase and amplitude.
 
 \begin{figure}[Rotation in complex plane]{FIG:ROTATION}{Rotation in complex plane}
 	\includegraphics[width=7cm]{rotation}
 \end{figure}
 
-Firstly, before we proceed to define the phase and amplitude space, we will see
-an analogy with the rotations on the complex plane, which will be very useful to
-understand the role played by each of the magnitudes in our manifold.
+Firstly, it is useful to consider and analogy with the rotations on the complex
+plane, to understand the role by the phase and the amplitude in the manifold
+$\mathcal{F}$.
 
-Let  $z_1, z_2$ be two points in $\mathbb{C}$, as it is illustrated in the
-figure \ref{FIG:ROTATION}, when it is applied a rotation on the plane, their
-distance remains invariant, i.e., it is an action by isometries, as the
+Let $z_1, z_2$ be two points in $\mathbb{C}$, as it is illustrated in the
+figure \ref{FIG:ROTATION}, when a rotation on the plane is applied the distance
+between $z_1$ and $z_2 remains invariant, i.e., it is an action by isometries, as the
 reparameterizations on our manifold.
 
-
-The variability between two vectors in the plane can be completely specified by
+The variability between two vectors in the plane is completely specified by
 the angle between them, which will play the role of the phase in our space, and
 the difference of their modules, which will be equivalent to the distance
 between the vector once aligned.
@@ -70,8 +68,8 @@ which will denoted as
 $\Gamma = \{\gamma :[0,1] \rightarrow[0,1]  : \gamma \text{ is a boundary-preserving diffeomorphism}\}$,
 for which the natural distance will be given by the Fisher-Rao metric.
 
-Let $\gamma \in \Gamma$ be a warping function, under the Fisher-Rao metric,
-their norm will be 1, thus
+Let $\gamma \in \Gamma$ be a warping function. Under the Fisher-Rao metric,
+the norm of such $\gamma$ is 1, thus
 
 \begin{equation}[]{Norm of warping}
 \| \gamma \|_\Gamma^2 = \| SRSF(\gamma)\|_{\mathbb{L}^2}^2 =  \| \dot \gamma\|_{\mathbb{L}^2}^2 =
@@ -79,11 +77,11 @@ their norm will be 1, thus
 \int_0^1 \dot \gamma(t)dt = \gamma(1) - \gamma(0) = 1.
 \end{equation}
 
-The SRSF transform will be an isometry between $\Gamma$ and the unit sphere in
+The SRSF transform is an isometry between $\Gamma$ and the unit sphere in
 $\mathbb{L}^2$, also known as Hilbert Sphere
 $\mathbb{S}_\infty = \{ \psi \in \mathbb{L}^2 : \|\psi\|_{\mathbb{L}^2}=1\}$.
 To calculate distances in $\Gamma$ we will apply this transformation which will
-allow us to use the structure of $\mathbb{S}_\infty$.
+allow us to take advantage of the structure of $\mathbb{S}_\infty$.
 
 Let $\gamma_1, \gamma_2$ be in $\Gamma$ and $\psi_1=\sqrt{\dot \gamma_1},
 \psi_2=\sqrt{\dot \gamma_1}$ be their SRSF, their distance in $\Gamma$ will be
@@ -106,12 +104,12 @@ Let $f_1, f_2$ be functions in $\mathcal{F}$, their relative phase is defined as
 \left(\gamma_{1}^{*}, \gamma_{2}^{*}\right)=\underset{\gamma_{1}, \gamma_{2} \in \Gamma}{\operatorname{argmin}}\left\|\left(q_{1}, \gamma_{1}\right)-\left(q_{2}, \gamma_{2}\right)\right\| \in \Gamma \times \Gamma.
 \end{equation}
 
-Which will allow us to calculate the phase variability between them,
+Thus allow us to calculate the phase variability between them,
 as a generalization of the notion of an angle. The phase distance between these
-functions will be the distance of their relative phase
-$d_{phase} (\gamma_{1}^{*}, \gamma_{2}^{*})$. Alternatively, we can use de properties of
-the metric to define the relative phase depending on a single warping,
+functions is the distance of their relative phase
+$d_{phase} (\gamma_{1}^{*}, \gamma_{2}^{*})$. Alternatively, the properties of
+the metric can be used to define the relative phase depending on a single warping,
 $
 \gamma_{12}^{*}=\underset{\gamma \in \Gamma}{\operatorname{argmin}}\left(\left\|\left(q_{1}, \gamma \right)- q_{2}\right\|\right),
 $
-which is quivalent to set $\gamma_2^*$ to de identity in \ref{EQ:RELATIVEPHASE}.
+which is quivalent to set $\gamma_2^*$ to the identity in \ref{EQ:RELATIVEPHASE}.
