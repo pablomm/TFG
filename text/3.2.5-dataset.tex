@@ -1,3 +1,15 @@
-In the dataset module have been included synthetic generators, used during the
-development of tests or examples. May be found generators of sinusoidal
-processes, multimodal samples or random warpings.
+
+The package contains a module for downloading datasets from different sources
+as functional objects or the creation of synthetic datasets.
+Among the methods created for the generation of datasets are included
+\texit{make_sinusoidal_process}, which generates samples of the form
+$f_i(t)=a_i\sin{wt + \phi_i} + e_i(t)$,
+\texit{make_multimodal_samples}, which generates mixtures of gaussian-like
+functions, such as those of the figure \ref{FIG:},
+ or \texit{make_random_warping}, to generate sets of warpings functions like the
+ those of the figure \ref{FIG:}.
+
+
+ These synthetic datasets are useful for the generation of examples and the
+ creation of tests, for this reason they have turned out to be fundamental
+ during the coding and testing phase.
