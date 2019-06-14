@@ -1,4 +1,4 @@
-It will be useful to quantify the amount of variability due to the phase and the
+It is useful to quantify the amount of variability due to the phase and the
 amplitude, in order to understand the data and validate the registration
 procedure. For this purpose, in Kneip and Ramsay (2008)
 \cite{RamsayAlois2008} it is developed an effective method for quantifying
@@ -14,7 +14,9 @@ cross-sectional means. The Total Mean Square Error is defined as
 \frac{1}{N}\sum_{i=1}^{N}\int[x_i(t)-\overline x(t)]^2dt .
 \end{equation}
 
-We can decompose the error in the part to each of the two sources of variability.
+This error can be decomposed[??] as
+$\text{MSE}_{total} = \text{MSE}_{amp} + \text{MSE}_{phase}$. This allow separate
+the variability due to the phase and the amplitude.
 
 \begin{equation}[]{Mean square decomposed}
 \text{MSE}_{amp} =  C_R \frac{1}{N}
@@ -24,10 +26,7 @@ We can decompose the error in the part to each of the two sources of variability
 \end{equation}
 
 Where $C_R$ is a constant related with the covariance between $\dot \gamma_i$
-and $y_i^2$. May be  proved[*] that 
-$
-\text{MSE}_{total} = \text{MSE}_{amp} + \text{MSE}_{phase}.
-$
+and $y_i^2$.
 
 %$$
 %%C_R = 1 + \frac{\frac{1}{N}\sum_{i}^{N}\int [\dot \gamma(t)-\overline{\dot \gamma}(t)]
@@ -35,9 +34,11 @@ $
 %        {\frac{1}{N} \sum_{i}^{N} \int y_i^2(t)dt}
 %$$
 
-From this separation we will construct a square multiple correlation index
-$R^2$, which will indicate the proportion of the variation due to the phase
-explained by our registration process. This index will be defined as
+From this decomposition it is possible to define the
+
+square error multiple correlation index, which indicates the proportion of the
+variation due to the phase
+explained by the registration process. This index is defined as
 
 \begin{equation}[]{Square multiple correlation index}
 R^2 = \frac{\text{MSE}_{phase}}{\text{MSE}_{total}}.
@@ -45,4 +46,4 @@ R^2 = \frac{\text{MSE}_{phase}}{\text{MSE}_{total}}.
 
 For instance, by quantifying the alignment of the dataset of the figure
 \ref{FIG:SHIFT}, we get a value of \\ $R^2=0.99$, which indicates that the $99\%$ of
-the variability it is produced by the phase .
+the variability it is produced by the phase.

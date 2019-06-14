@@ -3,7 +3,7 @@ of the observations and align these points using a warping function. This method
  is called landmark registration.
 
 A landmark, or feature of a curve, is some characteristic that can be
-associated with a specific point of the domain, typically maximums, minimums or
+associated with a specific point of the domain. There are typically maximums, minimums or
 zero crossings points. For instance, the population shown in figure
 \ref{FIG:LANDMARK} has two distinctive features, formed by the maximum points of
  each of the samples.
@@ -20,7 +20,7 @@ the identification of the values $\{t_{ij}\}_{j=1}^{F}$ associated with each of
 the $F$ features, which will be aligned to a common point
 $\{t_{j}^*\}_{j=1}^{F}$. Once we have the landmarks points, we will build the
  warping functions so that $\gamma_i(t_j^*)=t_{ij}$, thus
- 
+
 \begin{equation}[]{Warping mapping of landmarks}
 x_i^*(t_j^*) = x_i(\gamma_i(t_j^*)) = x_i(t_{ij}).
 \end{equation}

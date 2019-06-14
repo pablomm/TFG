@@ -16,17 +16,17 @@ the curves. In the figure \ref{SBFIG:SHIFT2} it is shown the result of apply
 this type of transformation to the set of sinusoidal waves.
 
 
-
 A possible solution for the calculation of shifts $\delta_i$, is using a least
-square criterion, defined as
+square criterion, minimizing the registered sum of squared errors (REGSSE),
+defined as
 
 \begin{equation}[EQ:REGSSE]{Least square criterion}
 \text{REGSSE} = \sum_{i=1}^{n}\int_{\mathcal{T}}\left [x_i(t+\delta_i) - \hat \mu(t) \right ]^2 dt
 \end{equation}
 
 The alignment problem will be based on finding the values $\delta_i$ that
-minimize $\mathbb{L}^2$ distance to the cross-sectional mean. For this purpose,
-we will use the derivatives of the functions $x_i$, using a variation of the
+minimize this sum of errors. For this purpose,
+we will use the derivatives of the functions $x_i$, using a variant of the
 Newton-Rhapson method. A description of the algorithm used to calculate these
 values is given in the Appendix \ref{SEC:NEWTON}.
 
