@@ -1,72 +1,80 @@
-The \texit{representation} module includes general functionalities for the
+The \textit{representation} module includes general functionalities for the
 representation of functional data and classes for processing this data using
 object-oriented design.
-
-At the beginning of this work there were two classes in the package, \texit{FDataBasis}
-and \texit{FDataGrid}, to represent the data in basis or discretized form.
+There were two classes, \textit{FDataBasis}
+and \textit{FDataGrid}, to represent the data in basis or discretized form, as it was explained in the indroduction of the chapter \ref{CAP:STATEOFART}.
 These classes contain common functionalities.
-In order to unify these functionalities, a common abstract class called \textit{FData}
-has been created, from which the previous ones inherit. This class implements methods
-for the
+In order to unify these functionalities, an abstract class called \textit{FData}
+has been created, from which the previous ones inherit. This class implements methods for the
 evaluation of the data as functions and its plotting.
 Aside from methods for the composition of functions or operations between them.
-
 The method created for the evaluation of functional data in \textit{FData}
 allows its evaluation
-as function vectors $f = (f_1, f_2, \dots f_n)'$ with
-$f_j:\mathb{R}^d\rightarrow\mathb{R}^m$, using a similar syntax to the mathematical
-notation $f(t)$. It is also allowed to call these functions with multiple time
-values, so that
+as function vectors $f = (f_1, f_2, \dots, f_n)'$ where
+$f_i:\mathbb{R}^d\rightarrow\mathbb{R}^m$, using a similar syntax to the mathematical
+notation $f(t)$. It is also allowed to call these functions in a vectorized way with multiple values, so that
 
-\begin{equation}
+\begin{equation}[]{Evaluation of functional data}
 f((t_1, t_2, \dots, t_k)) =
 \begin{pmatrix}
     f_1((t_1, t_2, \dots, t_k))\\
     f_2((t_1, t_2, \dots, t_k))\\
     \vdots\\
-    \vdots\\
-    d_6
+    f_n((t_1, t_2, \dots, t_k))
   \end{pmatrix}
 =
-\left[\begin{array}{ccc}{f_1(t_1) & {f_2(t_2) & {\dots} \\ {\vdots} & {\ddots} & {} \\ {f_n(t_1) & {} & {a_{K K}}\end{array}\right,
+\begin{pmatrix}
+f_1(t_1) & f_1(t_2) & \dots & f_1(t_k) \\
+f_2(t_1) & \ddots &  & f_2(t_k) \\
+\vdots &  & \ddots & \vdots \\
+f_n(t_1) & f_n(t_2) & \dots & f_n(t_k) \\
+\end{pmatrix}
+%\left[\begin{array}{ccc}{f_1(t_1) & {f_2(t_2) & {\dots} \\ {\vdots} & {\ddots} & {} \\ {f_n(t_1) & {} & {a_{K K}}\end{array}\right,
 \end{equation}
 
-where $t_1, t_2, \dots t_k$ are the points of evaluation in $\mathbb{R}^d$
+where $t_1, t_2, \dots t_k$ are the points of evaluation in $\mathbb{R}^d$.
 
-For example, the code snippet X shows the creation of a set of 4 random observation
-defined in $[0, 1]$. These random observations are packed in a $FData$ object
-using a discrete representation. The samples are then evaluated at points
-0, 0.5 and 1.
+For example, the code \ref{COD:EVAL} shows the creation of a set of three random observations
+defined in $[0, 1]$. These random observations are packed in a \textit{FData} object
+using a discrete representation. The samples are then evaluated at $0$, $0.5$ and $1$.
 
+\lstset{frame=lines}
+\lstset{caption={Example of evaluation of an \textit{FData}}}
+\lstset{label={COD:EVAL}}
+%\lstset{basicstyle=\footnotesize}
+
+\begin{lstlisting}[language=Python]
 >>> from skfda.datasets import make_sinusoidal_data
 >>>
->>> f = make_sinusoidal_process(n_samples=4, start=0, stop=1) # Creation
->>> f([0, 0.5, 1]).round(3) #Evaluation
+>>> f = make_sinusoidal_process(n_samples=3, start=0, stop=1)
+>>> f([0, 0.5, 1]).round(3)
 array([[-0.677,  0.368, -0.372],
        [ 0.702, -0.717,  0.765],
-       [-0.8  ,  0.405, -0.703],
-       [-0.252,  0.32 , -0.229]])
+       [-0.8  ,  0.405, -0.703]])
+\end{lstlisting}
 
-The evaluate method separates the points $t_i$ into two sets, depending on
+
+
+The evaluation method separates the evaluation points $t_j$ into two sets, depending on
 whether they are inside or outside the domain range of the functions. The points
 within the domain range are passed to the evaluation kernel to its evaluation,
 which will depend  on the implementation of the representation. In the discrete
 representation it is used interpolation to this purpose.
 
 A submodule called \textit{interpolation} has been created with different
-interpolation methods, used in the class \texit{FDataGrid} as evaluation kernel.
-In this module may be found the \texit{SplineInterpolation} class,
+interpolation methods, used in the class \textit{FDataGrid} as evaluation kernel.
+In this module may be found the \textit{SplineInterpolation} class,
 which implements the different interpolation techniques explained in the
 section \ref{SEC:INTERPOLATION}.
 
-In addition, \texit{FData} objects have an extrapolator, to which
+In addition, \textit{FData} objects have an extrapolator, to which
 points outside their domain are passed during the evaluation. It was created
-a submodule called \texit{extrapolation} with different extrapolators used in
+a submodule called \textit{extrapolation} with different extrapolators used in
 this task,
-in which they have included the classes \texit{PeriodicExtrapolation}, to
-extend the domain periodically, \texit{BoundExtrapolation}, to use the
+in which they have included the classes \textit{PeriodicExtrapolation}, to
+extend the domain periodically, \textit{BoundExtrapolation}, to use the
 values of the limits or \textit{FillExtrapolation}, to return a fixed value.
 
-Once the data is in functional form using an \texit{FData} object,
+Once the data is in functional form using an \textit{FData} object,
 it is possible to use the rest of the functionalities of the package, such as
 the registration methods or the models for regression and classification.

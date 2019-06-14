@@ -1,23 +1,22 @@
 
 
 The package contains a module with tools for machine learning.
-This module is divided into three submodules called \texit{classification},
-\texit{regression} and \texit{clustering}.
+This module is divided into three submodules called \textit{classification},
+\textit{regression} and \textit{clustering}.
 Models for data classification and regression have been incorporated using
 the nearest neighbors estimators detailed in the section \ref{SEC:NEIGHBORS}.
 
-These models have been designed following the API of the sklearn estimators,
+These models have been designed following the API of the\textit{sklearn} estimators,
 to allow their use together with the functionalities it offers, such as
 validation tools or integration in pipelines to automate tasks.
-
-Among the classes created in this module are \texit{KNeighborsClassifier},
-for classification using KNN, \texit{KNeighborsRegressor},
+Among the classes created in this module are \textit{KNeighborsClassifier},
+for classification using KNN, \textit{KNeighborsRegressor},
 for both scalar and functional regression,
 as well as its equivalent using a radius instead of a fixed number of neighbors
-\texit{RadiusNeighborsClassifier} and \texit{RadiusNeighborsRegressor}.
+\textit{RadiusNeighborsClassifier} and \textit{RadiusNeighborsRegressor}.
 All of these classes contain two main methods, fit, to train the model,
 and predict, to predict new labels or responses.
 
 In addition, it is possible to change the metrics used for neighbor searches,
-for this purpose  may be used the metrics incorporated in the \texit{metrics}
+for this purpose  may be used the metrics incorporated in the \textit{metrics}
 module.
