@@ -8,8 +8,7 @@ functional. The alignment problem may be understood as the search of a warping
 function $\gamma^*$ which minimizes the energy between the two functions, i.e.,
 
 \begin{equation}[EQ:ENERGY]{Creterion for pairwise alignment}
-
-\gamma^* = \operatorname{argmin}_{\gamma \in \Gamma} E[f_1, f_2 \circ \gamma]$.
+\gamma^* = \underset{\gamma \in \Gamma}{ \operatorname{argmin}} \, E[f_1, f_2 \circ \gamma].
 \end{equation}
 
 When a warping $\gamma^*$ fulfills this property, we will say that $f_1$ is
@@ -25,7 +24,7 @@ To estimate $\gamma^*$, we will explore different paths that the
 reparameterization may take in a discretized grid, trying to minimize the energy
 term. In the appendix \ref{SEC:DPA} the algorithm used for this
 task is described in detail. This algorithm is called DPA \cite{Srivastava2016}, because it makes use of
-dynamic programming techniques to search the optimal path.
+dynamic programming techniques to search the optimal path \cite{dpa}.
 
 Given a set of functions $\{f_i\}_{i=1}^n \subset \mathcal{F}$, the
 groupwise alignment problem will consist in the search of warping functions
@@ -33,7 +32,7 @@ $\{\gamma_i^* \}_{i=1}^n \subset \Gamma$ to align each of the functions with the
 rest of them. To achieve this, we will build a target function $\mu$, also
 called template, to which all the curves will be aligned. For instance,
 the cross-sectional mean of the functions can be used as target, which is
-the average function \frac{1}{n}\sum_{i=1}^{n}f_i.
+the average function $\frac{1}{n}\sum_{i=1}^{n}f_i$.
 
 A possible choice for the energy term would be to take
 $E[f-1,f_2]= \|f-1 - f_2\|_{\mathbb{L}^2}^2=\int_\mathcal{F} (f_1 - f_2)^2$.
