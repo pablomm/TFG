@@ -1,17 +1,66 @@
-In FDA, the analyzed data might take the form of temporal series, curves,
-surfaces or anything else varying over a continuum.  The observations that will
-make up our data will come from random variables, whose realizations will take
-values in functional spaces, that is to say, they will be realizations of
-stochastic processes. For this reason, under this framework, we will consider
-them functions.
+In FDA, the analyzed data can take the form of temporal series, curves,
+surfaces or any process that varies over a continuum. The observations that
+make up our data come from random variables, whose realizations take
+values in functional spaces, that is to say, they are realizations of
+stochastic processes. For this reason, they can be viewed as random functions.
 
+In practice, the information of a functional datum $f(t)$ is observed and
+recorded as pairs $(t_j, y_j)$, where $y_j$ is a snatshoot of the
+function $f$ at $t_j$, i.e., $f(t_j)$ and $t_1 < t_2 < \dots$.
 One may wonder what makes FDA different from multivariate analysis, considering
-the fact that data is generally collected and stored in the form of discrete
-point sets ${(t_j, y_j)}$ \cite{Srivastava2016}.  In
-multivariate statistics one works with the vector ${y_j}$, applying statistical
-methods and vector calculus to its study. However, FDA keeps the association of
+the fact that data is generally recorded and stored in the form of
+observations at discrete points \cite{Srivastava2016}.
+In multivariate statistics one works with the vector of values $\{y_j\}$,
+applying statistical methods and vector calculus to its study,
+But without taking into account the high correlation between the values
+$y_j, and $y_{j+1}$, due to the continuous structure given by the parameter on
+which they vary. The order of the values $t_j$ is fundamental  due to its
+functional nature.
+
+However, FDA keeps the association of
 values ${y_j}$ and ${t_j}$, taking into account the functional nature of the
 data, allowing the study of the data using functional calculus.
+Since the observations are functions, dependent on one or several continuous
+parameters, such as the time in which a process takes place, it is not
+possible to measure and store all the points which they are defined for.
 
-In this chapter we will make an overview, from a theoretical point of view, of
-different FDA topics covered in this work.
+There are two main approaches in FDA to represent the data while preserving its
+functional structure. The first, called \textit{discrete representation}, stores
+a finite grid of pairs $(t_j, y_j)$ with the recorded
+values, but unlike multivariate statistics, the continuous dependence between
+$y_j$ and $t_j$ is taken into account. These pairs represent the values
+$f(t_j) = y_j$ of a functional datum $f$. Interpolation is used o reconstruct
+the data as a continuous function from its discrete values.
+
+The second one is a parametric approach, called \textit{basis representation},
+in which is considered a system of functions $\{\phi_k(t) \}_{k=1}^K$, such as a
+truncated Fourier basis or a set of polynomials. This system forms a finite
+subspace of the original functional space, where the
+observations are projected, obtaining a representation associated to the
+coefficients of the basis $f(t) \approx \sum_{k=1}^K c_k\phi_k(t)$.
+
+Due to this functional structure in the data,
+FDA needs to address some issues that do not arise when studying other types of
+data, such as vectors.
+For instance, once our data is represented as a set of functions
+$\{f_i(t)\}_{i=1}^{n}$, its variability can proceed from two sources,
+the random curve-to-curve variation, i.e., the difference between the values of
+the functions, or from its internal temporal structure.
+It is fundamental to study and quantify these two types of variability in
+the analysis of our data. This separation is called the registration of the data,
+and is treated in detail in the Section \ref{SEC:REGISTRATION}.
+
+FDA also deals with topics present in classical statistics in cases where the
+data are functions. Among these problems are the study of regression and
+classification models. In the section \ref{SEC:NEIGHBORS} the use of nearest
+neighbors estimators applied to functional data is studied.
+
+Although in FDA is also treated the case in which our data are multivariate
+functions, from  $\mathbb{R}^d$ to $\mathbb{R}^m$, in general, as a way of
+simplification, during this chapter we will assume that our data are
+univariate functions.
+
+In this chapter is made an overview, from a theoretical point of view, of
+different FDA topics covered in this work. However, this chapter also serves
+to introduce the functionalities included in the \textit{scikit-fda} package.
+The figures shown throughout this section have been made using these functionalities.
