@@ -1,35 +1,55 @@
 
 
-Functional data analysis (FDA), is a branch of the
-statistic which deals with the study of random variables of
+\textcolor{red}{TODO: Unificar notación, $f_i(t)$ para muestras, (t_j, y_j) para
+sus valores. Revisar notación de los splines. Revisar enlaces ?? y bibliografia.
+Revisión de la redacción y erratas. Glosario de términos. Conclusiones. Parte 3.}
+
+Functional data analysis (FDA), is a branch of
+Statistics that deals with the study of random variables of
 functional nature, such as time series or curves in the
 space. It is a relatively recent field, whose first references
 began in the 1950s, with various articles related to the study of stochastic
 processes. However, it was not until 1982 with the publication by
-J.O. Ramsay of \textit{When the data are functions}\cite{Ramsay1982} when the term FDA began
-to be used to denote so this field.
-
+J.O. Ramsay of \textit{When the data are functions}\cite{Ramsay1982} when the
+term FDA began to be used to denote this field.
 Since then, and especially in the last two decades, techniques used for this analysis
 have evolved quickly, as well as their applications in a wide range of fields
 such as medicine, bioinformatics or engineering.
 
-Although there were some software solutions to support this field, such as
-\textit{fda}\cite{fda-r}, powered by J.O. Ramsay\cite{Ramsay2009}; or \textit{fda.usc}\cite{FdaUsc}, powered by the
-University of Santiago de Compostela. But none of them had been implemented
-under the philosophy of a open-source project, encouraging open collaboration.
-In addition all implementations were based on R or Matlab, and there were no
-Python packages for this purpose, although its use has become widespread in
-recent years in statistics and machine learning.
+Due to their continuous structure, the data treated in FDA are considered functions.
+However, functional data are generally observed and recorded as a discrete set of
+measures. For this reason, one of the first tasks to be performed in FDA is the
+representation of these data as continuous functions.
+One of the main approaches to address this task is the use of interpolation
+for the construction of continuous functions from these discrete measurements.
 
-In 2017, the \textit{scikit-fda} project came into being,
-under the name \textit{fda}\cite{FDA2018}, as part of a degree work made by Miguel Carbajo
-at the UAM. The aim of this work was to initiate the creation of a
-Python package to give support to this field, under the philosophy of a open-source
-project, along with the creation of a community that contributes to development
-and maintenance. Currently the project is being driven by the machine
-learning group of the UAM (GAA-UAM) together with the contributions of several
-degree works, including this one.
+Once the data are in functional form, it is possible to proceed to perform
+further analysis, such as studying the variability of a set of samples.
+Unlike other types of data, due to their functional nature, the variability of
+a set of samples may come from their internal structure, such as the time scale
+in which a process takes place. For this reason, it is necessary to
+incorporate a stage in the analysis in which this variability is quantified
+and separated. This stage is called registration.
 
-Although the project is in an early stage of development, the package is already
-in use by some researchers and was presented in the
-III International Workshop on Advances in Functional Data Analysis\cite{workshop}.
+Throughout this work we will focus primarily on three areas of FDA:
+the use of interpolation for data representation, the registration, and the use
+of nearest neighbors estimators on classification and regression problems with
+functional data.
+
+There are some software solutions in R and Matlab that provide support to this
+field, such as \textit{fda}\cite{fda-r}\cite{Ramsay2009};
+or \textit{fda.usc}\cite{FdaUsc}, developed by a team at the
+University of Santiago de Compostela.
+Inspired by these solutions, in 2017, the \textit{scikit-fda} project arose
+under the name \textit{fda}\cite{FDA2018}, as part of a Bachelor's degree thesis
+made by Miguel Carbajo at the UAM. The aim of this work was to initiate the creation of a
+Python package to give support to this field, under the philosophy of an open-source
+project, along with the creation of a community that contributes to its development
+and maintenance.
+
+Currently, the project is being driven by the Machine
+Learning Group at the UAM (GAA-UAM) together with the contributions of several
+undergraduate thesis, such as this one.
+The package is already in use by some researchers and was presented
+in the III International Workshop on Advances in Functional Data
+Analysis\cite{workshop}.

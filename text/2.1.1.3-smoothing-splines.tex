@@ -19,8 +19,8 @@ $(\tilde t_k, \tilde y_k)$. Figure \ref{FIG:SMOOTHING} shows the smoothing
 interpolation of a noisy observation.
 
 To determine the knots $\tilde t_k$ is used an smoothing parameter $\alpha$.
-It is assigned a weight $w_k$ to each of the original points $t_k$, used to calculate
-the knots $\tilde t_k$ as a weighted average of the original ones. This weights
+A weight $w_k$ is assigned to each of the original points $t_k$, used to calculate
+the knots $\tilde t_k$ as a weighted average of the original ones. These weights
 can be set uniformly.
 The number of knows will be increased until the smoothing condition is satisfied,
 defined as
@@ -34,4 +34,7 @@ In other words, the smoothing parameter sets the maximum value of the residuals.
 
 After representing the data as continuous functions, we can move on to other
 parts of the analysis, such as the study of variability due to the continuous
-structure of the data.
+structure of the data, called registration of the data. The techniques used
+during the registration of the data require the use of a discrete
+representation of the functions and their evaluation in arbitrary points,
+which is done by interpolation.

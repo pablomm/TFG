@@ -1,25 +1,36 @@
-El análisis de datos funcionales, también denominado FDA, es una rama de la 
+El análisis de datos funcionales, también denominado FDA, es una rama de la
 estadística encargada del estudio de variables aleatorias de naturaleza
 funcional, como puede ser un conjunto de series temporales o de curvas en el
-espacio.
+espacio. Por esta razón en FDA los datos tratados son considerados funciones.
 
-En las últimas dos décadas las técnicas empleadas para este análisis han
-evolucionado rápidamente, así como sus aplicaciones en gran cantidad de campos
-como medicina, bioinformática o ingeniería.
+Durante este trabajo se han tratado tres partes fundamentales de este campo:
+la representación de los datos como funciones, el estudio de su variabilidad
+y los problemas de clasificación y regresión.
 
-Sin embargo, debido a la relativamente reciente aparición de este campo, no hay
-una gran diversidad de soluciones software que engloben estas técnicas. Por esta
-razón en el año 2017 surgió el proyecto de código abierto 
-llamado \textit{scikit-fda}, con el objetivo de crear un paquete en Python 
-que diera soporte a este estudio, junto con una comunidad que contribuyera a su
-desarrollo.
+Generalmente este tipo de datos son observados y medidos en un conjunto
+discreto de puntos, por lo que será necesaria su representación como
+funciones continuas a partir de estas mediciones.
+Uno de los enfoques empleados, para ello, en el cual nos centraremos, es el uso de interpolación.
+Esta representación funcional resultará fundamental durante el análisis posterior,
+como en el estudio de la variabilidad de un conjunto de muestras.
 
-Con este trabajo se pretende contribuir al crecimiento de este proyecto, cuyo
-objetivo a largo plazo es convertirse en una referencia en FDA que contenga una
-amplia variedad de herramientas para el estudio de estos datos.
+Debido a su naturaleza continua, la variabilidad de los datos
+puede proceder de su escala interna, como el tiempo en el que evoluciona un
+proceso. La fase en la que este tipo variabilidad es cuantificada y separada se
+conoce como el registro de los datos. Tras esta etapa de preproceso, es posible
+abordar otros temas clásicos en estadística, como son los problemas de
+clasificación y regresión. Entre los modelos usados para ello se encuentran los
+estimadores de vecinos próximos, basados en la noción de cercanía entre los
+datos de una muestra, los cuales serán tratados en este trabajo.
 
-En concreto, durante este trabajo se han realizado contribuciones en diferentes
-áreas de este campo, entre las que se encuentran el registro de los datos, etapa
-en la cual se estudia la variabilidad debida a su escala interna, como puede
-ser el tiempo en el que evoluciona un proceso; o su representación, en la cual
-se estudian los problemas asociados su tratamiento y almacenamiento.
+En el año 2017 surgió el proyecto \textit{scikit-fda}, con el objetivo de crear
+un paquete en Python que diera soporte a este estudio. El objetivo principal
+de este trabajo ha sido dotar al paquete de funcionalidades relativas a la
+representación, registro, clasificación y regresión de datos funcionales.
+
+
+%En las últimas dos décadas las técnicas empleadas para este análisis han
+%evolucionado rápidamente, así como sus aplicaciones en gran cantidad de campos
+%como medicina, bioinformática o ingeniería.
+%Esta técnica permite la construcción de funciones a partir de un conjunto de
+%mediciones discretas de los datos.

@@ -1,23 +1,33 @@
-Functional data analysis, also called FDA, is a branch of statistics that deals
+Functional data analysis, also called FDA, is a branch of Statistics that deals
 with the study of random variables of a functional nature, such as temporal
-series or curves in space.
+series or curves in space. For this reason in FDA the data treated are
+considered functions.
 
-In the last two decades, techniques used for this analysis have evolved quickly,
-as well as their applications in many fields such as medicine, bioinformatics
-or engineering.
+During this work we focus on three fundamental parts of this field:
+the representation of data as functions, the study of their variability,
+and the classification and regression problems.
 
-However, due to the relatively recent appearance of this field, there is not a
-great variety of software solutions that encompass these techniques. For this
-reason, in 2017 the open-source project called \textit{scikit-fda} arose, with the aim of
-creating a Python package which would support this study, along with a
-community that would contribute to its development.
+Generally, this type of data is observed and measured in a discrete set of
+points, so it is necessary to represent them as continuous functions using
+these measurements. One of the approaches employed, on which we will focus, is the
+use of interpolation. This functional representation will be fundamental during
+the subsequent analysis, as in the study of the variability of a set of samples.
 
-This work aims to contribute to the growth of this project, whose long-term goal
-is to become a reference in FDA, containing a wide variety of tools for the
-study of these data.
+Because of its continuous nature, the data variability may be due to its
+internal scale, such as the time in which a process evolves.
+The part in which this type of variability is quantified and separated is known
+as registration.
 
-Specifically, during this work contributions have been made in different areas
-of this field, including the registration of data, a stage in which the
-variability due to its internal scale is studied, such as the time in which a
-process evolves; or its representation, in which the problems associated with
-its treatment and storage are studied.
+Due to its continuous nature, data variability can come from its internal scale,
+such as the time in which a process evolves. The part in which this
+type of variability is quantified and separated is known as registration.
+After this pre-processing step, it is possible to address other classic
+issues in Statistics, such as the problems of classification and regression.
+Among the models used for this are the estimators of nearest neighbors,
+based on the notion of closeness among samples. These estimators
+will be treated in this work.
+
+In 2017, the project \textit{scikit-fda} arose, with the aim of creating a
+Python package to support this study. The main purpose of this work has been to
+provide the package with functionalities relating to the representation,
+registration, classification and regression of functional data.

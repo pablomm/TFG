@@ -1,19 +1,20 @@
-The aim of this work is to continue the \textit{scikit-fda} project,
-collaborating with in a general way in its development, but especially in the
-registration of functional data, one of the areas of FDA, in which it is studied the
-variability of the data due to its internal scale, such as time
-in which a process unfolds.
+The aim of this work is to increase the functionality provided by the
+\textit{scikit-fda} software package. The functionalities that will
+be developed during this work may be divided into three main areas.
 
-Due to the extent of this area, it is not possible
-to cover all techniques in this field, therefore the purpose of this work was
-not delimited from the beginning in a clear way.
-It was decided to start with techniques
-exposed in the book \textit{Functional data analysis}\cite{Ramsay2005},
-which makes a general overview of different
-aspects in FDA, but without a clear goal on the specific
-aspects to be dealt with.
+Firstly, interpolation techniques will be integrated with the existing
+structures for the representation of functional data. These original structures
+do not allow the evaluation of functional data as if they were functions,
+which will be possible after the incorporation of the contributions of this work.
 
-For this reason, weekly meetings were scheduled throughout the year with all the
-team involved in the project, to review the scope of this work and the next
-steps to follow in its development, with the goal in mind to contribute as much
-as possible to the growth of this project.
+Secondly, tools will be created to the data registration. For this task
+the books \textit{Functional data analysis}\cite{Ramsay2005} and
+\textit{Functional and shape analysis}\cite{Srivastava2016} have been taken from
+reference. As a result of these contributions, the package will have an API
+to perform this step of the analysis.
+
+To conclude, classification and regression models based on nearest neighbours
+will be incorporated. For this purpose,
+the estimators of the text{sklearn}\cite{sklearn} API will be used as a reference,
+incorporating an extension of these estimators for functional data
+into the text{scikit-fda} package.
