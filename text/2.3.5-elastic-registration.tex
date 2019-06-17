@@ -1,10 +1,10 @@
 
-In this section we will define a procedure, which will be called the elastic
+In this section we will define a procedure, which will be called  elastic
 registration, to perform a groupwise alignment of a dataset under this
-framework. A target function will be created, called elastic mean, to which all
+framework. A target function will be created, called the elastic mean, to which all
 samples will be aligned later, as discussed in section \ref{SEC:L2PAIRWISE}.
 
-Let $\{f_i\} \subset \mathscr{F}$ be a dataset of functions to register and
+Let $\{f_i\} \subset \mathcal{F}$ be a dataset of functions to register and
 $q_i$ their corresponding SRSFs. Firstly we will compute their Karcher mean in
 $\mathscr{A}$, defined as
 
@@ -19,21 +19,18 @@ this orbit, for that reason we will define the center of the orbit as the
 element $\tilde \mu_{q}  \in [\mu_{q}]$  such that the relatives phases
 ${\gamma_i^*}$ between ${q_i}$ and $[\mu_{q}]$ have as Karcher mean the identity.
 
+\begin{figure}[Scheme of the elastic registration procedure]{FIG:SCHEME}{Scheme of the elastic registration procedure.}
+	\includegraphics[width=5cm]{scheme-elastic}
+\end{figure}
+
 We will select an arbitrary element $\mu_{q}$ of $[\mu_{q}]$ to which we will
 calculate the corresponding warping functions to align the set of SRSFs, i.e.,
 $\gamma_{i}=\operatorname{arginf}_{\gamma \in \Gamma}\left\|\tilde{q}-
 \left(q_{i}, \gamma\right)\right\|$.
-
-\begin{figure}[Scheme of the elastic registration procedure]{FIG:SCHEME}{Scheme of the elastic registration procedure.}
-  \includegraphics[width=6cm]{scheme-elastic}
-\end{figure}
-
 Then, we will compute the Karcher mean of $\{\gamma_i\}$, denoted as
-$\bar \gamma$, in the phase space, using the algorithm detailed in the
-appendix B.3. The center of the orbit will be
+$\bar \gamma$, in the phase space. The center of the orbit will be
 $\tilde \mu_q = (\mu_q , {\bar \gamma}^{-1})$.
-
-The mean of the relative phases with respect to $\tilde \mu_q$, will be the
+The mean of the relative phases with respect to the center of the orbit $\tilde \mu_q$, will be the
 identity, thus
 
 \begin{equation}[]{Identity mean}

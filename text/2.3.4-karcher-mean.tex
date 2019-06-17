@@ -12,6 +12,13 @@ We are interested in extend this idea to general metrics spaces.
 Let $(X, d)$ be a metric space and $\{x_i\}_{i=1}^{N}$ random points in $X$.
 The Fréchet variance of a point $p \in X$ as $\Psi(p)=\sum_{i=1}^{N} d^{2}\left(p, x_{i}\right)$.
 
+\begin{figure}[Karcher mean of dataset]{FIG:KARCHER}{Karcher mean of dataset}
+	\subfigure[SBFIG:KARCHER1]{Dataset of unimodal samples}{\includegraphics[width=7cm]{unimodal-dataset}} \quad
+	\subfigure[SBFIG:KARCHER2]{Usual mean and Karcher mean on $\mathscr{A}$}{\includegraphics[width=7cm]{means}} \\
+	\subfigure[SBFIG:RANK1]{Ranked by elastic distance}{\includegraphics[width=7cm]{dataset-by-amplitude}} \quad
+	\subfigure[SBFIG:RANK2]{Ranked by phase distance}{\includegraphics[width=7cm]{dataset-by-phase}}
+\end{figure}
+
 The Fréchet mean of these random points will be defined as the element $m \in X$
 which globally minimizes the Fréchet Variance. If this global minimum does not
 exist, we will call Karcher means to the points that locally minimizes the variance
@@ -21,20 +28,15 @@ $\Psi(p)$, i. e.,
 m=\underset{p \in M}{\arg \min } \sum_{i=1}^{N} d^{2}\left(p, x_{\dot{i}}\right)
 \end{equation}
 
-These Karcher means can better capture the geometry of the problem!!!!!
+These Karcher means are adapted to the metrics used in the analysis. For this reason they can better capture the geometry of our problem
 than usual mean, as it is shown in the figure \ref{SBFIG:KARCHER2}, where it is
 used a Karcher mean on $\mathscr{A}$.
-To calculate these means are used the algorithms explained in the appendix \ref{SEC:KARCHERF}.
-For instance, the dataset shown in \ref{SBFIG:KARCHER1} contains Gaussian-like
+%To calculate these means are used the algorithms explained in the appendix \ref{SEC:KARCHERF}.
+The dataset shown in \ref{SBFIG:KARCHER1} contains Gaussian-like
 samples, however the usual mean of figure \ref{SBFIG:KARCHER2} is not able to reflect
 this shape, unlike the Karcher mean in $\mathscr{A}$.
 
-\begin{figure}[Karcher mean of dataset]{FIG:KARCHER}{Karcher mean of dataset}
-	\subfigure[SBFIG:KARCHER1]{Dataset of unimodal samples}{\includegraphics[width=7cm]{unimodal-dataset}} \quad
-	\subfigure[SBFIG:KARCHER2]{Usual mean and Karcher mean on $\mathscr{A}$}{\includegraphics[width=7cm]{means}} \\
-	\subfigure[SBFIG:RANK1]{Ranked by elastic distance}{\includegraphics[width=7cm]{dataset-by-amplitude}} \quad
-	\subfigure[SBFIG:RANK2]{Ranked by phase distance}{\includegraphics[width=7cm]{dataset-by-phase}}
-\end{figure}
+
 
 As an example of the behavior of these means with different metrics,
 the centrality of an observation in a dataset  can be measured using its

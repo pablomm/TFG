@@ -15,20 +15,19 @@ zero crossings points. For instance, the population shown in figure
 \end{figure}
 
 
-The landmark registration process will require, for each observation $x_i$,
+The landmark registration process will require, for each observation $f_i$,
 the identification of the values $\{t_{ij}\}_{j=1}^{F}$ associated with each of
 the $F$ features, which will be aligned to a common point
 $\{t_{j}^*\}_{j=1}^{F}$. Once we have the landmarks points, we will build the
  warping functions so that $\gamma_i(t_j^*)=t_{ij}$, thus
 
 \begin{equation}[]{Warping mapping of landmarks}
-x_i^*(t_j^*) = x_i(\gamma_i(t_j^*)) = x_i(t_{ij}).
+f_i^*(t_j^*) = f_i(\gamma_i(t_j^*)) = f_i(t_{ij}).
 \end{equation}
 
 Not all sets of populations have differentiated characteristics of this type,
 moreover, by taking into account only a limited number of points the resulting
 alignments can become quite artificial, altering the internal structure of the
 samples.
-
 This will motivate us to build methods which use a global criterion for
 alignment and not just a discrete number of points.

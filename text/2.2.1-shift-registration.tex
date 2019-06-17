@@ -4,11 +4,11 @@ registration. Although it is a basic approach, it will be useful in many cases.
 Figure \ref{SBFIG:SHIFT1} shows a set of sinusoidal waves whose phases are not
 aligned, and a shift in the time scale will be adequate to make the alignment.
 
-Let $\{x_i\}_{i=1}^n$ be a set of functional observations, which will be aligned
+Let $\{f_i\}_{i=1}^n$ be a set of functional observations, which will be aligned
 using this transformation. We are actually interested in finding the values
 
 \begin{equation}[EQN:SHIFTS]{Shift registrtion}
-x_i^*(t)=x_i(t+ \delta_i) \qquad i=1,2, \dots n
+f_i^*(t)=f_i(t+ \delta_i) \qquad i=1,2, \dots n
 \end{equation}
 
 where the shift parameter $\delta_i$ is chosen in order to align the features of
@@ -21,8 +21,9 @@ square criterion, minimizing the registered sum of squared errors (REGSSE),
 defined as
 
 \begin{equation}[EQ:REGSSE]{Least square criterion}
-\text{REGSSE} = \sum_{i=1}^{n}\int_{\mathcal{T}}\left [x_i(t+\delta_i) - \hat \mu(t) \right ]^2 dt
+\text{REGSSE} = \sum_{i=1}^{n}\int_{\mathcal{T}}\left [f_i(t+\delta_i) - \hat \mu(t) \right ]^2 dt
 \end{equation}
+where $\hat \mu(t)$ is the mean of the registered functions $f_i(t+\delta_i)$.
 
 The alignment problem will be based on finding the values $\delta_i$ that
 minimize this sum of errors. For this purpose,

@@ -1,4 +1,4 @@
-In the regression problem, each of the training samples $\mathcal{X}_i$ have a
+In the regression problem, each of the training samples $f_i$ have a
 response $Y_i$ associated with them. This response can be either scalar or
 functional, although the way to proceed will be similar.
 
@@ -10,7 +10,7 @@ In the scalar response case, a weighted average of the neighbors’ responses
 $Y_i$ is used, so that the prediction will be calculated as
 
 \begin{equation}{Regression response}
-\hat Y = \sum_{(X_i, Y_i) : X_i \in k(x)} w_i Y_i \, ,
+\hat Y = \sum_{(f_i, Y_i) : f_i \in k(x)} w_i Y_i \, ,
 \end{equation}
 
 where $\sum w_i = 1$.

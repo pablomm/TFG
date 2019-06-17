@@ -7,12 +7,16 @@ remains invariant to warpings in the domain, i. e.,
 $d(f_1, f_2) = d(f_1 \circ \gamma, f_2 \circ \gamma)$.
 
 For this purpose we will use the Fisher-Rao metric. This Riemannian metric was
-introduced in 1945 by C. R. Fisher [??] in a version on the
+introduced in 1945 by C. R. Fisher in a version on the
 space of probability distributions. In our case we will use a non-parametric
 version, slightly different from the original one, defined on the space of
 signed measures. This metric plays a very important role in information
 geometry, and it is the only metric that possesses this property of
 invariance to warpings in the domain\cite{Cencov1982}.
+
+\begin{figure}[Tangent space of tridimensional manifold]{FIG:TANGENT}{Tangent space of tridimensional manifold $M$}
+	\includegraphics[width=6cm]{tangential-vector}
+\end{figure}
 
 A Riemannian metric is an application that assigns an inner product at each
 point of variety on its tangent space that varies smoothly from point to point.
@@ -28,14 +32,12 @@ paths of the variety passing through the point. For example, in the Figure
 the path are tangent vectors to the curve. In this case the tangent space $T_xM$
 made up of all these vectors is a plane.
 
-\begin{figure}[Tangent space of tridimensional manifold]{FIG:TANGENT}{Tangent space of tridimensional manifold $M$}
-  \includegraphics[width=6cm]{tangential-vector}
-\end{figure}
+
 
 In our case the manifold will be formed by the set of absolutely continuous
 functions $\mathcal{F}$, that is, those functions whose derivative exists a.e.
 and belongs to the space of square integrable functions $\mathbb{L}^2$. An
-the tangent space of the points of $\mathcal{F}$ may be understood as smooth
+the path between points of $\mathcal{F}$ may be understood as smooth
 deformations of the functions.
 We will endow $\mathcal{F}$ with the Fisher-Rao metric.
 
@@ -94,9 +96,9 @@ $\mathcal{F}$ and the space of SRSF's with the $\mathbb{L}^2$ metric.
 A consequence is that the computation of geodesics shown in
 \ref{FIG:GEODESIC} becomes in a straight line
 between SRSFs,
-\begin{equation}[]{Straight line of SRSFs}
+$
 \alpha(\tau) = (1 - \tau)q_1 + \tau q_2 \quad 0 \le \tau \le 1.
-\end{equation}
+$
 
 Given $\gamma \in \Gamma$, the SRSF of $f \circ \gamma$ is
 
@@ -106,9 +108,9 @@ SRSF\{f \circ \gamma\} = \operatorname{sgn}(\dot{f} \circ \gamma) \sqrt{|\dot f 
 \end{equation}
 
 To simplify the
-notation the SRSF of this composition is denoted by $(q, \gamma)$.
-Using this fact, we can proof that the action of $\Gamma$ on $\mathscr{F}$ is an
-action by isometries, i.e, given $f  \in \mathscr{F}$ and $\gamma \in \Gamma$
+notation, the SRSF of this composition is denoted by $(q, \gamma)$.
+Using this fact, we can proof that the action of $\Gamma$ on $\mathcal{F}$ is an
+action by isometries, i.e, given $f  \in \mathcal{F}$ and $\gamma \in \Gamma$
 the composition $f \circ \gamma$ preserves the metric.
 A proof of this result is given in the appendix \ref{SEC:ACTION}.
 Figure \ref{FIG:ACTIONS} shows a diagram with the action of the composition

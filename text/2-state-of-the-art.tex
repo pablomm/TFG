@@ -6,17 +6,16 @@ stochastic processes. For this reason, they can be viewed as random functions.
 
 In practice, the information of a functional datum $f(t)$ is observed and
 recorded as pairs $(t_j, y_j)$, where $y_j$ is a snatshoot of the
-function $f$ at $t_j$, i.e., $f(t_j)$ and $t_1 < t_2 < \dots$.
+function $f$ at $t_j$, i.e., $f(t_j)$.
 One may wonder what makes FDA different from multivariate analysis, considering
 the fact that data is generally recorded and stored in the form of
 observations at discrete points \cite{Srivastava2016}.
 In multivariate statistics one works with the vector of values $\{y_j\}$,
 applying statistical methods and vector calculus to its study,
-But without taking into account the high correlation between the values
-$y_j, and $y_{j+1}$, due to the continuous structure given by the parameter on
-which they vary. The order of the values $t_j$ is fundamental  due to its
-functional nature.
-
+but without taking into account the high correlation between the values
+$y_j$, and $y_{j+1}$, due to the continuous structure given by the parameter on
+which they vary. 
+%The order of the values $t_j$ is fundamental  due to its functional nature.
 However, FDA keeps the association of
 values ${y_j}$ and ${t_j}$, taking into account the functional nature of the
 data, allowing the study of the data using functional calculus.
@@ -26,11 +25,7 @@ possible to measure and store all the points which they are defined for.
 
 There are two main approaches in FDA to represent the data while preserving its
 functional structure. The first, called \textit{discrete representation}, stores
-a finite grid of pairs $(t_j, y_j)$ with the recorded
-values, but unlike multivariate statistics, the continuous dependence between
-$y_j$ and $t_j$ is taken into account. These pairs represent the values
-$f(t_j) = y_j$ of a functional datum $f$. Interpolation is used o reconstruct
-the data as a continuous function from its discrete values.
+in a finite grid the pairs $(t_j, y_j)$ which representes the values $f(t_j)$. Interpolation is used o reconstruct the data as a continuous function from its discrete values.
 
 The second one is a parametric approach, called \textit{basis representation},
 in which is considered a system of functions $\{\phi_k(t) \}_{k=1}^K$, such as a

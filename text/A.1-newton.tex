@@ -1,23 +1,23 @@
 
 
-For the calculation of the values $\delta_i$ necessary for the shift registration of a set  $\{x_i\}_{i=1}^{n}$, according to \ref{EQN:SHIFTS},
+For the calculation of the values $\delta_i$ necessary for the shift registration of a set  $\{f_i\}_{i=1}^{n}$, according to \ref{EQN:SHIFTS},
 we will use a variation of the Newton-Rhapson's root-finding algorithm, applied
 to the derivative of REGSSE (\ref{EQ:REGSSE}). This procedure is explained in more detail
 in Ramsay and Silverman (2005) \cite{Ramsay2005}.
 
 For this computation it will be necessary to evaluate derivatives of
-$x_i$, so it will be crucial a previous smoothing step of the samples.
+$f_i$, so it will be crucial a previous smoothing step of the samples.
 Derivatives of REGGSE are given by:
 
 \begin{equation}[EQ:FIRST]{First derivative of REGSSE}
 \frac{\partial}{\partial \delta_i} \text{REGSSE} = 2 \int_{\mathcal{T}}
-\left [ x_i(t + \delta_i) - \hat \mu(t) \right ] Dx_i(t) dt,
+\left [ f_i(t + \delta_i) - \hat \mu(t) \right ] Df_i(t) dt,
 \end{equation}
 
 \begin{equation}[EQ:SECOND]{Second derivative of REGSSE}
 \frac{\partial^2}{\partial \delta^2_i} \text{REGSSE} = 2
-\int_{\mathcal{T}} \left [ x_i(t + \delta_i) - \hat \mu(t) \right ]
-D^2x_i(t) dt + 2 \int_{\mathcal{T}} \left [  Dx_i(t)^2 \right ]  dt.
+\int_{\mathcal{T}} \left [ f_i(t + \delta_i) - \hat \mu(t) \right ]
+D^2f_i(t) dt + 2 \int_{\mathcal{T}} \left [  Df_i(t)^2 \right ]  dt.
 \end{equation}
 
 In practice the first term of $\frac{\partial^2}{\partial \delta^2_i}\textbf{REGSSE}$
@@ -27,7 +27,7 @@ minimize the criterion. Therefore the following approximation is used:
 
 \begin{equation}[]{Aproximation of second derivative of REGSSE}
 \frac{\partial^2}{\partial \delta^2_i} \text{REGSSE} \approx  
-2 \int_{\mathcal{T}} \left [  Dx_i(t)^2 \right ]  dt.
+2 \int_{\mathcal{T}} \left [  Df_i(t)^2 \right ]  dt.
 \end{equation}
 
 \begin{algorithmN}[ALG:NEWTON]{Shift registration by Rhapson-Newton algorithm}{Shift registration by Rhapson-Newton algorithm}
@@ -38,7 +38,7 @@ minimize the criterion. Therefore the following approximation is used:
 	\SetKwFunction{FindCompress}{FindCompress}
 	\SetKwInOut{Input}{Input}
 	\SetKwInOut{Output}{Output}
-	\Input{Set of functional observations $\{x_i(t)\}_{i=1}^{n}$}
+	\Input{Set of functional observations $\{f_i(t)\}_{i=1}^{n}$}
 	\Output{Shifts $\{\delta_i\}_{i=1}^{n}$ used to register the data}
 	\BlankLine
 	Initialize $\delta^{(0)}$ \;
@@ -46,7 +46,7 @@ minimize the criterion. Therefore the following approximation is used:
 	\For{step $\nu = 1, 2, \dots$ until stop criterion}{
 		\emph{Update cross-sectional mean}
 		
-		$\hat \mu(t) \leftarrow \frac{1}{n} \sum_{i=1}^{n} x_i(t + \delta_i^{(\nu -1)})$
+		$\hat \mu(t) \leftarrow \frac{1}{n} \sum_{i=1}^{n} f_i(t + \delta_i^{(\nu -1)})$
 		
 		\lForEach{$\delta_i ^{(\nu - 1)}$}{
 			

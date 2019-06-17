@@ -1,16 +1,16 @@
 
 In the classification problem, the samples of the training set
-$\mathcal{X}_i$ are associated to the labels $Y_i$ corresponding to their class.
+$f_i$ are associated to the labels $Y_i$ corresponding to their class.
 Given a datum $x$, a new label is predicted using the majority class among
 its neighbors, so that the predicted class will be
 
 \begin{equation}{Classification prediction}
-\hat Y =\underset{j}{\operatorname{argmax}} \sum_{\mathcal{X}_i \in k(x)} \mathbbm{1}_{\{ Y_i = j\}}.
+\hat Y =\underset{j}{\operatorname{argmax}} \sum_{f_i \in k(x)} \mathbbm{1}_{\{ Y_i = j\}}.
 \end{equation}
 
 It is possible to make a weighting vote, so that the closest neighbors will have
-a greater weight, for example, using $w_i=1/d(\mathcal{X}_i, x)$, so that the
+a greater weight, for example, using $w_i=1/d(f_i, x)$, so that the
 resulting label will be
 $
-\hat Y = \underset{j}{\operatorname{argmax}}  \sum_{\mathcal{X}_i \in k(x)} w_i\mathbbm{1}_{\{ Y_i = j\}}.
+\hat Y = \underset{j}{\operatorname{argmax}}  \sum_{f_i \in k(x)} w_i\mathbbm{1}_{\{ Y_i = j\}}.
 $

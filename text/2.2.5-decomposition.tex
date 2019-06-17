@@ -4,25 +4,25 @@ procedure. For this purpose, in Kneip and Ramsay (2008)
 \cite{RamsayAlois2008} it is developed an effective method for quantifying
 this variation once the data have been aligned.
 
-Let $\{x_i\}_{i=1}^N$ be a set of functional observations, and
-$\{y_i\}_{i=1}^N = \{x_i \circ \gamma_i\}_{i=1}^N$ the corresponding registered
-observations. Also, we will denote as $\bar x$ and $\bar y$ the
+Let $\{f_i\}_{i=1}^N$ be a set of functional observations, and
+$\{f^*_i\}_{i=1}^N = \{f_i \circ \gamma_i\}_{i=1}^N$ the corresponding registered
+observations. Also, we will denote as $\bar f$ and $\bar f^*$ the
 cross-sectional means. The Total Mean Square Error is defined as
 
 \begin{equation}[]{Mean square error total}
-\text{MSE}_{total}=  \frac{1}{N}\sum_{i=1}^{N} \|x_i(t)-\overline x(t)\|^2 =
-\frac{1}{N}\sum_{i=1}^{N}\int[x_i(t)-\overline x(t)]^2dt .
+\text{MSE}_{total}=  \frac{1}{N}\sum_{i=1}^{N} \|f_i(t)-\overline f(t)\|^2 =
+\frac{1}{N}\sum_{i=1}^{N}\int[f_i(t)-\overline f(t)]^2dt .
 \end{equation}
 
-This error can be decomposed[??] as
+This error can be decomposed as
 $\text{MSE}_{total} = \text{MSE}_{amp} + \text{MSE}_{phase}$. This allow separate
 the variability due to the phase and the amplitude.
 
 \begin{equation}[]{Mean square decomposed}
 \text{MSE}_{amp} =  C_R \frac{1}{N}
-        \sum_{i=1}^{N} \int \left [ y_i(t) - \overline{y}(t) \right ]^2 dt \quad
+        \sum_{i=1}^{N} \int \left [ f^*_i(t) - \overline{f^*}(t) \right ]^2 dt \quad
 \text{MSE}_{phase}=
-        \int \left [C_R \overline{y}^2(t) - \overline{x}^2(t) \right]dt
+        \int \left [C_R \overline{f^*}^2(t) - \overline{f}^2(t) \right]dt
 \end{equation}
 
 %$$
@@ -32,7 +32,7 @@ the variability due to the phase and the amplitude.
 %$$
 
 Where $C_R$ is a constant related with the covariance between $\dot \gamma_i$
-and $y_i^2$.
+and $(y_i^*)^2$.
 From this decomposition it is possible to define the
 square error multiple correlation index, which indicates the proportion of the
 variation due to the phase

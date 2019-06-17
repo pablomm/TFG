@@ -9,10 +9,9 @@ detailed in section \ref{SEC:ELASTICREG}.
 In addition, this module contains functions for the treatment of
 warpings functions among other useful processes during the registration phase.
 
-
-For the implementation of the alignment algorithm used in the pairwise alignment
-(eqn. \ref{}), code \textit{C} had to be used to ensure the efficiency of the process,
-which is called by the Python library through \textit{Cython}.
+To ensure the efficiency of the algorithm used in the pairwise alignment
+(eqn. \ref{EQ:ENERGY}), it was used code \textit{C},
+which is called by the Python package through \textit{Cython}.
 
 All recording methods have been designed to receive an \textit{FData} object and
 return another one containing the registered samples, which can be used with

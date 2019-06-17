@@ -9,12 +9,12 @@ this will motivate the use of smoothing splines.
 	\subfigure[SBFIG:SMOOTHING2]{Several values of the smoothing factor}{\includegraphics[width=7.5cm]{smoothing-splines-values}}
 \end{figure}
 
-This method is a variant of the spline interpolation, but we will not
-use directly the points $\{t_k\}_{k=1}^{N}$ as knots. Instead, we will use a
+This method is a variant of the spline interpolation, wich not
+uses directly the points $\{t_k\}_{k=1}^{N}$ as knots. Instead, it is used a
 smaller set of knots $\{\tilde t_k\}_{k=1}^{M}$, generally different from the
 originals, with their corresponding values $\tilde y_k = f(\tilde t_k)$
 calculated using spline interpolation. The function interpolated using smoothing
-splines will be defined using spline interpolation on the set of knots
+splines is defined using spline interpolation on the set of knots
 $(\tilde t_k, \tilde y_k)$. Figure \ref{FIG:SMOOTHING} shows the smoothing
 interpolation of a noisy observation.
 
@@ -26,7 +26,7 @@ The number of knows will be increased until the smoothing condition is satisfied
 defined as
 
 \begin{equation}[]{Smoothing condition}
-\sum_{k=1}^N \left (  w_k (y_k - \tilde f(t_k)) \right)^2 \le \alpha
+\sum_{k=1}^N \left (  w_k \left (y_k - \tilde f(t_k) \right) \right)^2 \le \alpha
 \end{equation}
 
 where $\tilde f(t_k)$ is the value of the smoothing spline at $t_k$.
