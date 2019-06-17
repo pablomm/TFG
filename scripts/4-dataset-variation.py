@@ -37,8 +37,8 @@ if __name__ == "__main__":
     # Makes a plot with the data and the means
 
     plt.figure("phase-variation")
-    plt.plot(t, data_phase, color='teal')
-    plt.plot(t, data_phase.mean(axis=1), color='maroon', linestyle='dashed',
+    plt.plot(t, data_phase, color='C0')
+    plt.plot(t, data_phase.mean(axis=1), color='C1', linestyle='dashed',
              label='mean')
     plt.xlim(lims)
     plt.yticks([])
@@ -47,8 +47,8 @@ if __name__ == "__main__":
     plt.tight_layout()
 
     plt.figure("amplitude-variation")
-    plt.plot(t, data_amp, color='teal')
-    plt.plot(t, data_amp.mean(axis=1), color='maroon', linestyle='dashed',
+    plt.plot(t, data_amp, color='C0')
+    plt.plot(t, data_amp.mean(axis=1), color='C1', linestyle='dashed',
              label='mean')
     plt.xlim(lims)
     plt.yticks([])
