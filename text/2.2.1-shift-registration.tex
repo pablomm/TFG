@@ -1,3 +1,5 @@
+\newacronym{REGSSE}{REGSSE}{Registered sum of squared errors}
+
 A first approach to solve this problem was presented in Ramsay and Silverman
 (2005) \cite{Ramsay2005}, by considering a simple shift in the domain to make the
 registration. Although it is a basic approach, it will be useful in many cases.
@@ -17,8 +19,7 @@ this type of transformation to the set of sinusoidal waves.
 
 
 A possible solution for the calculation of shifts $\delta_i$, is using a least
-square criterion, minimizing the registered sum of squared errors (REGSSE),
-defined as
+square criterion, minimizing the  \ac{REGSSE}, defined as
 
 \begin{equation}[EQ:REGSSE]{Least square criterion}
 \text{REGSSE} = \sum_{i=1}^{n}\int_{\mathcal{T}}\left [f_i(t+\delta_i) - \hat \mu(t) \right ]^2 dt

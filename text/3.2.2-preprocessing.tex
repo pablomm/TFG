@@ -3,17 +3,16 @@ In the preprocessing module a specific module called \textit{registration} has
 been created to deal with the registration of the data using the techniques
 explained throughout the sections \ref{SEC:REGISTRATION} and \ref{SEC:ELASTIC}.
 Among the functions incorporated in this module are \textit{shift\_registration},
-for registrations using shifts, \textit{landmark\_registration},
+for registrations using shifts,\\ \textit{landmark\_registration},
 to employ known landmarks, or \textit{elastic\_registration} with the algorithm
 detailed in section \ref{SEC:ELASTICREG}.
 In addition, this module contains functions for the treatment of
 warpings functions among other useful processes during the registration phase.
-
 To ensure the efficiency of the algorithm used in the pairwise alignment
 (eqn. \ref{EQ:ENERGY}), it was used code \textit{C},
 which is called by the Python package through \textit{Cython}.
 
-All recording methods have been designed to receive an \textit{FData} object and
+All the registration methods have been designed to receive an \textit{FData} object and
 return another one containing the registered samples, which can be used with
 other functionalities of the package, such as the classification or regression
 models included in the machine learning module.

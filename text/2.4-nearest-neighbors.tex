@@ -2,7 +2,7 @@
 After representing the data in functional form, and preprocessing it to quantify and
 reduce its variability, it may be interesting to study the relationship between
 various functional variables. As in Multivariate Statistics and Machine Learning,
-FDA will deal with the problems of regression and classification, but in the case
+FDA will deal with the regression and classification problems, but in the case
 where some of the data are of a functional nature.
 
 
@@ -24,8 +24,11 @@ in which is predicted the precipitation curves from the temperatures.
 Among the models most used for these two problems can be found the nearest
 neighbors estimators.
 
-The nearest neighbors estimators (NN-estimators) are a family of methods widely
-used in statistics and machine learning, in problems of classification or
+\newacronym{NN}{NN}{Nearest Neighbors}
+
+
+The \ac{NN} estimators are a family of methods widely
+used in Statistics and Machine Learning, in problems of classification or
 regression, among others. These estimators are based on the idea of
 neighborhood, using the notion of distance, so that it is made a local
 estimation of the density of the data.
@@ -40,8 +43,10 @@ To estimate a datum $x$, either for classification or prediction of its
 response, firstly, it will be necessary to find the elements of the training set
 closest to this datum, which will form its neighborhood, denoted as $k(x)$.
 
+\newacronym{KNN}{KNN}{K-Nearest Neighbors}
+
 There are two variants of these methods. In the first one, consisting of
-k-nearest neighbors estimators, it is taken as neighborhood the $k$ closest
+\ac{KNN} estimators, it is taken as neighborhood the $k$ closest
 elements to $x$, i. e., if the training pairs are re-indexed as
 $(f_{(i)}, Y_{(i)}) \, 1\le i\le n$ so that the
 $f_{(i)}$'s are re-arranged in increasing distance from $x$,
