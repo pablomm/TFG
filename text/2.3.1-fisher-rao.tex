@@ -15,7 +15,7 @@ geometry, and it is the only metric that possesses this property of
 invariance to warpings in the domain\cite{Cencov1982}.
 
 \begin{figure}[Tangent space of tridimensional manifold]{FIG:TANGENT}{Tangent space of tridimensional manifold $M$ \footnotemark}
-	\includegraphics[width=6cm]{tangential-vector}
+	\includegraphics[width=6.5cm]{tangential-vector}
 \end{figure}
 
 \footnotetext{Derivative work: McSush. Original uploader: TN at German Wikipedia. [Public domain]}
@@ -70,9 +70,11 @@ d_{F R}\left(f_{1}, f_{2}\right)=\inf _{\alpha :[0,1]
 \rightarrow \mathcal{F}, \alpha(0)=f_{1}, \alpha(1)=f_{2}} L[\alpha] \, .
 \end{equation}
 
+\newacronym{SRSF}{SRSF}{Square Root Slope Funcion}
+
 This path is the shortest smooth deformation between $f_1$ and $f_2$. Figure \ref{SBFIG:GEODESIC1} illustrates some steps in the deformation between $f_1$ and $f_2$.
 Finding this geodesic path directly is computationally unapproachable,
-for this reason we will introduce the \textit{square root slope function} (SRSF)
+for this reason we will introduce the \ac{SRSF}
 transform, which simplifies this computation.
 
 \begin{figure}[Geodesic path in $\mathcal{F}$]{FIG:GEODESIC}{Geodesic path in $\mathcal{F}$ and the corresponding SRSF's}
@@ -80,9 +82,9 @@ transform, which simplifies this computation.
   \subfigure[SBFIG:GEODESIC2]{SRSF of the path}{\includegraphics[width=7.5cm]{srsf-geodesic}}
 \end{figure}
 
-Given $f \in \mathcal{F}$, its SRSF is defined as
+Given $f \in \mathcal{F}$, its \acs{SRSF} is defined as
 $SRSF\{f\} = \operatorname{sgn}{(\dot f)} \sqrt{|\dot f|}$. To simplify notation, in the
-subsequent sections, we will denote the SRSF of a function
+subsequent sections, we will denote the  \acs{SRSF} of a function
 $f_i \in \mathcal{F}$ as $q_i$.
 
 Under this transformation, the Fisher-Rao metric becomes the usual metric
@@ -92,9 +94,9 @@ SRSF's, i.e.,  $d_{FR}(f_1, f_2) = \| q_1 - q_2 \|_{\mathbb{L}^2}$. A proof of
 this result is included in appendix \ref{SEC:ACTION}.
 
 Taking advantage of this characterization we will take our functions to the
-SRSF's space to perform the analysis efficiently, and then transform the result
-to the original space. This can be done because the SRSF defines a map up to constant between
-$\mathcal{F}$ and the space of SRSF's with the $\mathbb{L}^2$ metric.
+SRSFs space to perform the analysis efficiently, and then transform the result
+to the original space. This can be done because the  \acs{SRSF} defines a map up to constant between
+$\mathcal{F}$ and the space of SRSFs with the $\mathbb{L}^2$ metric.
 A consequence is that the computation of geodesics shown in
 \ref{FIG:GEODESIC} becomes in a straight line
 between SRSFs,
@@ -110,7 +112,7 @@ SRSF\{f \circ \gamma\} = \operatorname{sgn}(\dot{f} \circ \gamma) \sqrt{|\dot f 
 \end{equation}
 
 To simplify the
-notation, the SRSF of this composition is denoted by $(q, \gamma)$.
+notation, the  \acs{SRSF} of this composition is denoted by $(q, \gamma)$.
 Using this fact, we can proof that the action of $\Gamma$ on $\mathcal{F}$ is an
 action by isometries, i.e, given $f  \in \mathcal{F}$ and $\gamma \in \Gamma$
 the composition $f \circ \gamma$ preserves the metric.
