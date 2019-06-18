@@ -14,8 +14,10 @@ fd = data['data']
 
 fd = fd[data['target'] == 0]
 
+
 fd = fd.derivative()
 fd.interpolator = SplineInterpolator(3)
+#fd = fd.to_grid(np.linspace(*fd.domain_range[0], 150))
 fd.dataset_label = None
 fd.axes_labels = ["age (year)", r"$\partial \, height \, / \, \partial \, age$ (cm/year)"]
 
