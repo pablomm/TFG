@@ -56,12 +56,12 @@ array([[-0.677,  0.368, -0.372],
 
 The evaluation method separates the evaluation points $t_j$ into two sets, depending on
 whether they are inside or outside the domain range of the functions. The points
-within the domain range are passed to the evaluation kernel to its evaluation,
+within the domain range are passed to the evaluator, defined by the type of representation,  to its evaluation,
 which will depend  on the implementation of the representation. In the discrete
 representation it is used interpolation to this purpose.
 
 A submodule called \textit{interpolation} has been created with different
-interpolation methods, used in the class \textit{FDataGrid} as evaluation kernel.
+interpolation methods, used in the class \textit{FDataGrid} as evaluator.
 In this module may be found the \textit{SplineInterpolation} class,
 which implements the different interpolation techniques explained in the
 Section \ref{SEC:INTERPOLATION}.
