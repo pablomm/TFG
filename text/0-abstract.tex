@@ -35,9 +35,14 @@ with data that are characterized by functions.
 Specifically, we design nearest neighbors estimators
 based on the notion of closeness among samples.
 
-Specifically, in this work have been implemented interpolation methods based on
-splines, as well as functionalities for data registration using shift
-registration and landmark registration, along with elastic registration,
-method based on the Fisher-Rao metric. In addition, models based on nearest
-neighbors have been included to perform regression, for scalar and functional
+Specifically, in this work
+the \textit{scikit-fda} package has been extended
+to include interpolation methods based on splines.
+The package has also been endowed with tools
+for data registration using either shifts,
+landmark alignment, or elastic registration,
+which makes use of the Fisher-Rao metric
+to align the functions in a sample.
+In addition, models based on nearest neighbors
+have been included to carry out regression, with both scalar and functional
 response, and classification.
