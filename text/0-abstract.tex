@@ -1,31 +1,43 @@
-Functional data analysis, also called FDA, is a branch of Statistics that deals
-with the study of random variables of a functional nature, such as temporal
-series or curves in space. For this reason in FDA the data treated are
-considered functions.
+Functional Data Analysis (FDA) is a branch of Statistics devoted
+to the study of random quantities that depend on a continuous parameter,
+such as time series or curves in space.
+In FDA the data instances can be viewed as random functions
+sampled from an underlying stochastic process.
 
-During this work we focus on three fundamental parts of this field:
-the representation of data as functions, the study of their variability,
-and the classification and regression problems.
+In this work we consider three different tasks in FDA:
+the use of interpolation techniques to estimate the values
+of the functions at unobserved points,
+the registration of these type of data,
+and the solution of classification and regression problems in which
+the instances are characterized by functional attributes.
+In particular, in this project the \textit{scikit-fda} package
+for FDA in Python has been extended
+with functionality in these areas.
 
-Generally, this type of data is observed and measured in a discrete set of
-points, so it is necessary to represent them as continuous functions using
-these measurements. One of the approaches employed, on which we will focus, is the
-use of interpolation. This functional representation will be fundamental during
-the subsequent analysis, as in the study of the variability of a set of samples.
-This data variability may be due to its
-internal scale, such as the time in which a process evolves.
-The part in which this type of variability is quantified and separated is known
-as registration.
-Data variability can come from its internal scale,
-such as the time in which a process evolves. The part in which this
-type of variability is quantified and separated is known as registration.
-After this pre-processing step, it is possible to address other classic
-issues in Statistics, such as the problems of classification and regression.
-Among the models used for this are the estimators of nearest neighbors,
-based on the notion of closeness among samples. These estimators
-will be treated in this work.
+Generally, the data instances considered in FDA consist of a
+collection of observations at a discrete values of the parameter
+on which they depend (e.g. time or space).
+For some applications it is convenient, and in some cases
+necessary, to estimate the value of these functions
+at unobserved points.
+This can be achieved through the use of interpolation
+from the available measurements.
 
-In 2017, the project \textit{scikit-fda} arose, with the aim of creating a
-Python package to support this study. The main purpose of this work has been to
-provide the package with functionalities relating to the representation,
-registration, classification and regression of functional data.
+In some applications, the functions observed
+have similar shapes, but exhibit variability whose
+origin can be traced to distortions in the scale
+of the continuous parameter on which the data depend.
+Registration consists in characterizing
+this variability and eliminating it from the sample considered.
+
+In this work we also address classification and regression problems
+with data that are characterized by functions.
+Specifically, we design nearest neighbors estimators
+based on the notion of closeness among samples.
+
+Specifically, in this work have been implemented interpolation methods based on
+splines, as well as functionalities for data registration using shift
+registration and landmark registration, along with elastic registration,
+method based on the Fisher-Rao metric. In addition, models based on nearest
+neighbors have been included to perform regression, for scalar and functional
+response, and classification.
