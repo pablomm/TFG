@@ -20,3 +20,7 @@ Derivative work: McSush (talk)Tangentialvektor.png: TNThe original uploader was 
 
 * [scikitfda2.png](https://github.com/pablomm/TFG/blob/master/figures/scikitfda2.png) - Scikit-fda logo, designed by 
 Sergio Ruiz Lozano. See the [scikit-fda](https://github.com/GAA-UAM/scikit-fda/) project page to check the license.
+
+* Figures using Berkeley growth data. Tuddenham, R. D., and Snyder, M. M. (1954) “Physical growth of California boys and girls from birth to age 18”, University of California Publications in Child Development, 1, 183-364.
+    - [berkeley-males.pdf](https://github.com/pablomm/TFG/blob/master/figures/berkeley-males.pdf)
+    - [berkeley-registered.pdf](https://github.com/pablomm/TFG/blob/master/figures/berkeley-registered.pdf)
