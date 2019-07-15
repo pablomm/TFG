@@ -2,7 +2,10 @@
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-Bachelor's thesis
+Report of my Bachelor's thesis to obtain a double degree in Computer Science and Mathematics at the Autonomous University of Madrid.
+This repository contains the files used to generate the undergraduate thesis 
+[document](https://github.com/pablomm/TFG/blob/master/tfg-pablo-marcos.pdf). 
+The contributions made in this work can be found in the [_scikit-fda_](https://github.com/GAA-UAM/)  project repository.
 
 ## Abstract
 
@@ -54,5 +57,3 @@ to align the functions in a sample.
 In addition, models based on nearest neighbors
 have been included to carry out regression, with both scalar and functional
 response, and classification.
-
-
